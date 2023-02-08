@@ -41,41 +41,55 @@ namespace MyApp // Note: actual namespace depends on the project name.
             }
             */
 
+
+
+
             /* >>>>>>>>> Usando a Classe Triângulo:  */
 
-            Triangulo x, y;
-            x = new Triangulo();            //Instânciando a Classe Triangulo;
-            y = new Triangulo();            // Criando Obj e Atribuindo a Classe;
-                                            // X e Y: São Object;
-                                            // A B e C: São Atributos;
+            /*Triangulo x, y;
+              x = new Triangulo();            //Instânciando a Classe Triangulo;
+              y = new Triangulo();            // Criando Obj e Atribuindo a Classe;
+                                              // X e Y: São Object;
+                                              // A B e C: São Atributos;
 
 
-            Console.WriteLine("Digite os lados do triângulo X");
-            x.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            x.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            x.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+              Console.WriteLine("Digite os lados do triângulo X");
+              x.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+              x.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+              x.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            Console.WriteLine("Digite os lados do triângulo Y");
-            y.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            y.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            y.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+              Console.WriteLine("Digite os lados do triângulo Y");
+              y.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+              y.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+              y.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            double areaX = x.Area();    //Usando o Método da Classe Triângulo;
+              double areaX = x.Area();    //Usando o Método da Classe Triângulo;
 
-            double areaY = y.Area();    //Usando o Método da Classe Triângulo;
+              double areaY = y.Area();    //Usando o Método da Classe Triângulo;
 
 
-            Console.WriteLine("Área de X:{0}", areaX.ToString("F1", CultureInfo.InvariantCulture));
-            Console.WriteLine("Área de Y:{0}", areaY.ToString("F1", CultureInfo.InvariantCulture));
+              Console.WriteLine("Área de X:{0}", areaX.ToString("F1", CultureInfo.InvariantCulture));
+              Console.WriteLine("Área de Y:{0}", areaY.ToString("F1", CultureInfo.InvariantCulture));
 
-            if (areaX > areaY)
-            {
-                Console.WriteLine("Área de X Maior!");
-            }
-            else
-            {
-                Console.WriteLine("Área de Y Maior!");
-            }
+              if (areaX > areaY)
+              {
+                  Console.WriteLine("Área de X Maior!");
+              }
+              else
+              {
+                  Console.WriteLine("Área de Y Maior!");
+              }
+              */
+
+
+
+
+            /* Aula 42: Projeto Produto   */ 
+
+
+
+
+
 
         }
 
