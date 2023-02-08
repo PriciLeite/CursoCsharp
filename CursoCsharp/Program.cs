@@ -8,10 +8,11 @@ namespace MyApp // Note: actual namespace depends on the project name.
     {
         static void Main(string[] args)
         {
-            /*  Código sem aplicação da Classe Triângulo  
-             * 
-             *          double xA, xB, xC, yA, yB, yC;
-             *          
+            /*  Aplicação da Classe Triângulo  */
+            #region
+            /*  
+            double xA, xB, xC, yA, yB, yC;
+                       
             Console.WriteLine("Digite os lados do triângulo X");
             double xA = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             double xB = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
@@ -40,12 +41,12 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 Console.WriteLine("Área de Y Maior!");
             }
             */
-
+            #endregion
 
 
 
             /* >>>>>>>>> Usando a Classe Triângulo:  */
-
+            #region
             /*Triangulo x, y;
               x = new Triangulo();            //Instânciando a Classe Triangulo;
               y = new Triangulo();            // Criando Obj e Atribuindo a Classe;
@@ -80,17 +81,50 @@ namespace MyApp // Note: actual namespace depends on the project name.
                   Console.WriteLine("Área de Y Maior!");
               }
               */
+            #endregion
+
+
+
+            /* Aula 42:Classe Produto   */
+            #region
+
+            Produto p = new Produto();
+            
+            // Instanciando a Classe Produto:
+            Console.WriteLine("Entre com dados do Produto: ");
+            
+            Console.Write("Nome do Produto: ");
+            p.Nome = Console.ReadLine();
+
+            Console.Write("Preço: ");
+            p.Preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            Console.Write("Quantidade: ");
+            p.Quantidade = int.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            // Lendo dados:
+            Console.WriteLine("Dados do Produto: " + p);
+
+
+            // Implementando o Método Adicionar Produtos:
+            Console.WriteLine("============================================");
+            Console.Write("Digite a quantidade para adicionar ao estoque: ");
+            int qte = int.Parse(Console.ReadLine());
+            p.AdicionarProdutos(qte);
+
+            Console.WriteLine("Dados Atualizados: " + p);
 
 
 
 
-            /* Aula 42: Projeto Produto   */ 
 
 
 
 
 
 
+
+            #endregion
         }
 
     }
