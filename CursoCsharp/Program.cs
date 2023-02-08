@@ -40,12 +40,15 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 Console.WriteLine("Área de Y Maior!");
             }
             */
-            
+
             /* >>>>>>>>> Usando a Classe Triângulo:  */
-            
+
             Triangulo x, y;
-            x = new Triangulo();
-            y = new Triangulo();
+            x = new Triangulo();            //Instânciando a Classe Triangulo;
+            y = new Triangulo();            // Criando Obj e Atribuindo a Classe;
+                                            // X e Y: São Object;
+                                            // A B e C: São Atributos;
+
 
             Console.WriteLine("Digite os lados do triângulo X");
             x.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
@@ -57,11 +60,10 @@ namespace MyApp // Note: actual namespace depends on the project name.
             y.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             y.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            double pX = (x.A + x.B + x.C) / 2.0;
-            double areaX = Math.Sqrt(pX * (pX - x.A) * (pX - x.B) * (pX - x.C));
+            double areaX = x.Area();    //Usando o Método da Classe Triângulo;
 
-            double pY = (y.A + y.B + y.C) / 2.0;
-            double areaY = Math.Sqrt(pY * (pY - y.A) * (pY - y.B) * (pY - y.C));
+            double areaY = y.Area();    //Usando o Método da Classe Triângulo;
+
 
             Console.WriteLine("Área de X:{0}", areaX.ToString("F1", CultureInfo.InvariantCulture));
             Console.WriteLine("Área de Y:{0}", areaY.ToString("F1", CultureInfo.InvariantCulture));
@@ -75,26 +77,9 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 Console.WriteLine("Área de Y Maior!");
             }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
-
-
-
 
     }
 
-
-
 }
+
