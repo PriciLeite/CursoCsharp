@@ -39,7 +39,16 @@ namespace CursoCsharp.Aula04.Classe.Atributos.Metodos.MetodosEstaticos
 
 
 
+        //Método Remover produto no estoque:
+        #region
+        public void RemoverProdutos(int quantidade)
+        {
+            Quantidade -= quantidade;
+        }
+        #endregion
 
+
+       
         // Método ToString para Leitura dos valores;
         #region
         public override string ToString()
@@ -55,6 +64,15 @@ namespace CursoCsharp.Aula04.Classe.Atributos.Metodos.MetodosEstaticos
         #endregion
 
 
-
+        // 
+    
+    
+    
+    
+    
     }
+
+
+
+
 }

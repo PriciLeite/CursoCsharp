@@ -87,7 +87,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
             /* Aula 42:Classe Produto   */
             #region
-
+            /*
             Produto p = new Produto();
             
             // Instanciando a Classe Produto:
@@ -114,18 +114,76 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
             Console.WriteLine("Dados Atualizados: " + p);
 
+            // Implementando o Método Remover Produtos:
+            Console.WriteLine("============================================");
+            Console.Write("Digite a quantidade para Remover do estoque: ");
+            int qteRemove = int.Parse(Console.ReadLine());
+            p.RemoverProdutos(qteRemove);
+
+            Console.WriteLine("Dados Atualizados: " + p);
+            */
+            #endregion
 
 
 
 
+            /* Aula 46: Membros Estáticos • Versão 1: métodos na própria classe do programa */
+            #region
 
-
-
-
-
+            // Usando as funções dentro do programa principal;
 
             #endregion
+
+
+
+
+            /* Aula 46: Membros Estáticos • Versão 2: Classe Calculadora com membros de INSTÂNCIA*/
+            #region
+            /*
+            Calculadora calc = new Calculadora();
+
+            Console.Write("Entre com o valor do raio: ");
+            double raio = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            double circ = calc.Circuferencia(raio);
+            double volume = calc.Volume(raio);
+
+
+            Console.WriteLine("Circuferência: " + circ.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("Volume: " + volume.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("Pi: " + calc.Pi.ToString("F2", CultureInfo.InvariantCulture));
+            */
+            #endregion
+
+
+
+
+
+            /* Aula 46: Membros Estáticos • Versão 3: classe Calculadora com método estático */
+            #region
+
+            //Calculadora calc = new Calculadora(); >>>> ELIMINA ESSA INSTÂNCIAÇÃO DO OBJETO <<<
+            // Chama a Classe pelo própio nome da Classe.
+
+
+            Console.Write("Entre com o valor do raio: ");
+            double raio = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            double circ = Calculadora.Circuferencia(raio);
+            double volume = Calculadora.Volume(raio);
+
+
+            Console.WriteLine("Circuferência: " + circ.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("Volume: " + volume.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("Pi: " + Calculadora.Pi.ToString("F2", CultureInfo.InvariantCulture));
+
+            #endregion
+
+
+
+
         }
+
 
     }
 
