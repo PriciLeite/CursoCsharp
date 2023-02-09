@@ -164,7 +164,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
             //Calculadora calc = new Calculadora(); >>>> ELIMINA ESSA INSTÂNCIAÇÃO DO OBJETO <<<
             // Chama a Classe pelo própio nome da Classe.
-
+            /*
 
             Console.Write("Entre com o valor do raio: ");
             double raio = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
@@ -176,11 +176,27 @@ namespace MyApp // Note: actual namespace depends on the project name.
             Console.WriteLine("Circuferência: " + circ.ToString("F2", CultureInfo.InvariantCulture));
             Console.WriteLine("Volume: " + volume.ToString("F2", CultureInfo.InvariantCulture));
             Console.WriteLine("Pi: " + Calculadora.Pi.ToString("F2", CultureInfo.InvariantCulture));
-
+            */
             #endregion
 
 
 
+
+
+            /* Aula 48: Exercício de fixação - Converso De Moeda */
+            #region
+            /*
+            Console.Write("Digite -> Qual a Cotação do dolar: ");
+            double cotacao = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            Console.Write("Digite -> Quantos dolares você vai comprar? ");
+            double quantidade = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            double total = ConversorDeMoeda.ConversaoDolarReal(cotacao, quantidade);
+
+            Console.WriteLine("Valor a ser pago em Reais: $" + total.ToString("F2", CultureInfo.InvariantCulture));
+            */
+            #endregion
 
         }
 
