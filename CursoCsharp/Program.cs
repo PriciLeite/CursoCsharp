@@ -1,4 +1,5 @@
 ﻿using CursoCsharp.Aula_05_Construtores_Palavra_this_Sobrecarga_Encapsulamento.Encapsulamento;
+using CursoCsharp.Aula_05_Construtores_Palavra_this_Sobrecarga_Encapsulamento.Properties;
 using CursoCsharp.Aula04.Classe.Atributos.Metodos.MetodosEstaticos;
 using System;
 using System.Globalization;
@@ -51,6 +52,8 @@ namespace CursoCsharp
 
 
 
+
+
             /* >>>>>>>>> Usando a Classe Triângulo:  */
             #region
             /*Triangulo x, y;
@@ -88,6 +91,9 @@ namespace CursoCsharp
               }
               */
             #endregion
+
+
+
 
 
 
@@ -133,12 +139,16 @@ namespace CursoCsharp
 
 
 
+
+
             /* Aula 46: Membros Estáticos • Versão 1: métodos na própria classe do programa */
             #region
 
             // Usando as funções dentro do programa principal;
 
             #endregion
+
+
 
 
 
@@ -160,6 +170,7 @@ namespace CursoCsharp
             Console.WriteLine("Pi: " + calc.Pi.ToString("F2", CultureInfo.InvariantCulture));
             */
             #endregion
+
 
 
 
@@ -189,6 +200,8 @@ namespace CursoCsharp
 
 
 
+
+
             /* Aula 48: Exercício de fixação - Converso De Moeda */
             #region
             /*
@@ -203,6 +216,8 @@ namespace CursoCsharp
             Console.WriteLine("Valor a ser pago em Reais: $" + total.ToString("F2", CultureInfo.InvariantCulture));
             */
             #endregion
+
+
 
 
 
@@ -255,6 +270,9 @@ namespace CursoCsharp
 
 
 
+
+
+
             /* Aula 52: SOBRECARGA Classe Produto */
             #region              
             /*
@@ -300,9 +318,12 @@ namespace CursoCsharp
 
 
 
+
+
+
             /* Aula 55: ENCAPSULAMENTO Classe Produto */
             #region
-
+            /*
             Produto_01 p = new Produto_01("TV", 500.00, 2);
 
             Console.WriteLine(p.GetNome()); // Só exibe
@@ -314,8 +335,49 @@ namespace CursoCsharp
             Console.WriteLine(p.GetPreco()); // Só exibe
 
             Console.WriteLine(p.GetQuantidade());
-
+            */
             #endregion
+
+
+
+
+
+            /* Aula 56: ENCAPSULAMENTO Classe Produto */
+            #region
+
+            /*
+           Produto_02 p = new Produto_02("TV", 500.00, 2);
+
+            Console.WriteLine(p.Nome);          // Properties get {  } 
+            p.Nome = "Tv 4k";                   // Properties set {  } 
+            Console.WriteLine(p.Nome);          // Properties get {  }
+
+
+            Console.WriteLine(p.Preco);         // Properties get {  }
+            p.Preco = 200.00;                   // Properties set {  }
+            Console.WriteLine(p.Preco);         // Properties get {  }
+
+
+            Console.WriteLine(p.Quantidade);     // Properties get {  }   
+            p.Quantidade = 5;                    // Properties set {  }
+            Console.WriteLine(p.Quantidade);     // Properties get {  }   
+
+
+
+            Console.WriteLine(p.ToString());      // Método ToString();  
+            */
+            #endregion
+
+
+
+
+
+
+
+
+
+
+
 
         }
 
