@@ -8,6 +8,11 @@ namespace MyApp // Note: actual namespace depends on the project name.
     {
         static void Main(string[] args)
         {
+
+            /* =========================================================================  */
+            /* Aula-04 Classes-Atributos-Metodos-MembrosEstaticos */
+
+
             /*  Aplicação da Classe Triângulo  */
             #region
             /*  
@@ -197,6 +202,60 @@ namespace MyApp // Note: actual namespace depends on the project name.
             Console.WriteLine("Valor a ser pago em Reais: $" + total.ToString("F2", CultureInfo.InvariantCulture));
             */
             #endregion
+
+
+           
+            
+            /* ====================================================================== */
+            /* Aula-05 Construtores-Palavra this-Sobrecarga-Encapsulamento  */
+
+            /* Aula 51: Construtores Classe Produto */
+
+            #region              
+            
+            // Instanciando a Classe Produto:
+            Console.WriteLine("Entre com dados do Produto: ");
+            
+            Console.Write("Nome do Produto: ");
+            string nome = Console.ReadLine();
+
+            Console.Write("Preço: ");
+            double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            Console.Write("Quantidade: ");
+            int quantidade = int.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            // Intânciando a Classe criando o produto:
+            Produto p = new Produto(nome, preco, quantidade);
+
+
+            // Lendo dados:
+            Console.WriteLine();
+            Console.WriteLine("Dados do Produto: " + p);
+
+
+            // Implementando o Método Adicionar Produtos:
+            Console.WriteLine("============================================");
+            Console.Write("Digite a quantidade para adicionar ao estoque: ");
+            int qte = int.Parse(Console.ReadLine());
+            p.AdicionarProdutos(qte);
+
+            Console.WriteLine("Dados Atualizados: " + p);
+
+            // Implementando o Método Remover Produtos:
+            Console.WriteLine("============================================");
+            Console.Write("Digite a quantidade para Remover do estoque: ");
+            int qteRemove = int.Parse(Console.ReadLine());
+            p.RemoverProdutos(qteRemove);
+
+            Console.WriteLine("Dados Atualizados: " + p);
+            
+            #endregion
+
+
+
+
+
 
         }
 

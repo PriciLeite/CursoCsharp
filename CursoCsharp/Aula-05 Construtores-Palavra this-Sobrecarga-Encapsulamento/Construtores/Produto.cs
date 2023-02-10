@@ -1,26 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Globalization;
 
-namespace CursoCsharp.Aula04.Classe.Atributos.Metodos.MetodosEstaticos
+namespace CursoCsharp.Aula_05_Construtores_Palavra_this_Sobrecarga_Encapsulamento.Construtores
 {
     internal class Produto
     {
         // Atributos da Classe Produto:
         #region 
+
         public string Nome;
         public double Preco;
         public int Quantidade;
 
-        public Produto(string? nome, double preco, int quantidade)
+        // Construtor para instânciar o obejto com parâmetros:
+        public Produto(string nome, double preco, int quantidade)
         {
             Nome = nome;
             Preco = preco;
             Quantidade = quantidade;
         }
+
         #endregion
 
 
@@ -30,12 +28,12 @@ namespace CursoCsharp.Aula04.Classe.Atributos.Metodos.MetodosEstaticos
         #region
         public double ValorTotalEmEstoque()
         {
-            return  Quantidade *  Preco;             
+            return Quantidade * Preco;
         }
         #endregion
 
 
-       
+
         //Método adicionar produto no estoque:
         #region
         public void AdicionarProdutos(int quantidade)
@@ -55,14 +53,14 @@ namespace CursoCsharp.Aula04.Classe.Atributos.Metodos.MetodosEstaticos
         #endregion
 
 
-       
+
         // Método ToString para Leitura dos valores;
         #region
         public override string ToString()
         {
-            return Nome 
+            return Nome
                 + ", $"
-                + Preco.ToString("F2", CultureInfo. InvariantCulture)
+                + Preco.ToString("F2", CultureInfo.InvariantCulture)
                 + ", "
                 + Quantidade
                 + " Unidades, Total:$ "
@@ -70,16 +68,5 @@ namespace CursoCsharp.Aula04.Classe.Atributos.Metodos.MetodosEstaticos
         }
         #endregion
 
-
-        // 
-    
-    
-    
-    
-    
     }
-
-
-
-
 }
