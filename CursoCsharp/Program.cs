@@ -1,8 +1,9 @@
-﻿using CursoCsharp.Aula04.Classe.Atributos.Metodos.MetodosEstaticos;
+﻿using CursoCsharp.Aula_05_Construtores_Palavra_this_Sobrecarga_Encapsulamento.Encapsulamento;
+using CursoCsharp.Aula04.Classe.Atributos.Metodos.MetodosEstaticos;
 using System;
 using System.Globalization;
 
-namespace MyApp // Note: actual namespace depends on the project name.
+namespace CursoCsharp
 {
     internal class Program
     {
@@ -204,8 +205,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
             #endregion
 
 
-           
-            
+
+
             /* ====================================================================== */
             /* Aula-05 Construtores-Palavra this-Sobrecarga-Encapsulamento  */
 
@@ -253,7 +254,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
 
 
-            
+
             /* Aula 52: SOBRECARGA Classe Produto */
             #region              
             /*
@@ -298,6 +299,23 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
 
 
+
+            /* Aula 55: ENCAPSULAMENTO Classe Produto */
+            #region
+
+            Produto_01 p = new Produto_01("TV", 500.00, 2);
+
+            Console.WriteLine(p.GetNome()); // Só exibe
+
+            p.SetNome("TV 4k"); // Altera
+            Console.WriteLine(p.GetNome()); // exibe novo nome
+
+
+            Console.WriteLine(p.GetPreco()); // Só exibe
+
+            Console.WriteLine(p.GetQuantidade());
+
+            #endregion
 
         }
 

@@ -32,6 +32,8 @@ namespace CursoCsharp.Aula04.Classe.Atributos.Metodos.MetodosEstaticos
 
 
 
+       
+        
         //Método Valor Total da Quantidade em Estoque:
         #region
         public double ValorTotalEmEstoque()
@@ -42,6 +44,8 @@ namespace CursoCsharp.Aula04.Classe.Atributos.Metodos.MetodosEstaticos
 
 
        
+       
+        
         //Método adicionar produto no estoque:
         #region
         public void AdicionarProdutos(int quantidade)
@@ -52,6 +56,8 @@ namespace CursoCsharp.Aula04.Classe.Atributos.Metodos.MetodosEstaticos
 
 
 
+       
+        
         //Método Remover produto no estoque:
         #region
         public void RemoverProdutos(int quantidade)
@@ -62,6 +68,8 @@ namespace CursoCsharp.Aula04.Classe.Atributos.Metodos.MetodosEstaticos
 
 
        
+        
+        
         // Método ToString para Leitura dos valores;
         #region
         public override string ToString()
@@ -74,15 +82,15 @@ namespace CursoCsharp.Aula04.Classe.Atributos.Metodos.MetodosEstaticos
                 + " Unidades, Total:$ "
                 + ValorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture);
         }
+
         #endregion
 
 
-        // 
-    
-    
-    
-    
-    
+
+
+
+
+
     }
 
 

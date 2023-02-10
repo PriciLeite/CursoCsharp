@@ -4,6 +4,7 @@ namespace CursoCsharp.Aula_05_Construtores_Palavra_this_Sobrecarga_Encapsulament
 {
     internal class Produto
     {
+        
         // Atributos da Classe Produto:
         #region 
 
@@ -74,6 +75,6 @@ namespace CursoCsharp.Aula_05_Construtores_Palavra_this_Sobrecarga_Encapsulament
         }
         #endregion
 
-
+        
     }
 }
