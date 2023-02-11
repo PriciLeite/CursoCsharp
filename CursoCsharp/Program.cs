@@ -1,4 +1,5 @@
-﻿using CursoCsharp.Aula_05_Construtores_Palavra_this_Sobrecarga_Encapsulamento.Encapsulamento;
+﻿using CursoCsharp.Aula_05_Construtores_Palavra_this_Sobrecarga_Encapsulamento.AutoProperties;
+using CursoCsharp.Aula_05_Construtores_Palavra_this_Sobrecarga_Encapsulamento.Encapsulamento;
 using CursoCsharp.Aula_05_Construtores_Palavra_this_Sobrecarga_Encapsulamento.Properties;
 using CursoCsharp.Aula04.Classe.Atributos.Metodos.MetodosEstaticos;
 using System;
@@ -342,7 +343,7 @@ namespace CursoCsharp
 
 
 
-            /* Aula 56: ENCAPSULAMENTO Classe Produto */
+            /* Aula 56: PROPERTIES Classe Produto_02 */
             #region
 
             /*
@@ -371,6 +372,32 @@ namespace CursoCsharp
 
 
 
+
+
+            /* Aula 57: AUTO PROPERTIES Classe Produto_03 */
+            #region
+            /*
+            Produto_03 p = new Produto_03("Computador", 3000.00, 10);
+
+            Console.WriteLine(p.Nome);          // Properties get {  } 
+            p.Nome = "Notebook";                // Properties set {  } 
+            Console.WriteLine(p.Nome);          // Properties get {  }
+
+
+            Console.WriteLine(p.Preco);         // Properties get {  }
+           // p.Preco = 200.00;                  =====>NÃO PERMITIDA PQ NA CLASSE ESTÁ PROPERTIES private set {  }
+            Console.WriteLine(p.Preco);         // Properties get {  }
+
+
+            Console.WriteLine(p.Quantidade);     // Properties get {  }   
+           // p.Quantidade = 5;                   =====>NÃO PERMITIDA PQ NA CLASSE ESTÁ PROPERTIES private set {  }
+            Console.WriteLine(p.Quantidade);     // Properties get {  }   
+
+
+
+            Console.WriteLine(p.ToString());      // Método ToString();  
+            */
+            #endregion
 
 
 
