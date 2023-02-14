@@ -1,5 +1,6 @@
 ﻿using CursoCsharp.Aula_05_Construtores_Palavra_this_Sobrecarga_Encapsulamento.AutoProperties;
 using CursoCsharp.Aula_05_Construtores_Palavra_this_Sobrecarga_Encapsulamento.Encapsulamento;
+using CursoCsharp.Aula_05_Construtores_Palavra_this_Sobrecarga_Encapsulamento.exe.conta.bancaria;
 using CursoCsharp.Aula_05_Construtores_Palavra_this_Sobrecarga_Encapsulamento.Properties;
 using CursoCsharp.Aula04.Classe.Atributos.Metodos.MetodosEstaticos;
 using System;
@@ -398,6 +399,19 @@ namespace CursoCsharp
             Console.WriteLine(p.ToString());      // Método ToString();  
             */
             #endregion
+
+
+
+
+
+            /* Aula 60: Exercício de Fixação Modulo 05 Calsse Conta Bancária */
+
+            ContaBancaria conta = new ContaBancaria("Marcia", 2635, 500, 200);
+
+            
+            Console.Write("Entre com número da conta: " + conta.Conta);
+                    
+           
 
 
 
