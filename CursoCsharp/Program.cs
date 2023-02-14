@@ -2,6 +2,7 @@
 using CursoCsharp.Aula_05_Construtores_Palavra_this_Sobrecarga_Encapsulamento.Encapsulamento;
 using CursoCsharp.Aula_05_Construtores_Palavra_this_Sobrecarga_Encapsulamento.exe.conta.bancaria;
 using CursoCsharp.Aula_05_Construtores_Palavra_this_Sobrecarga_Encapsulamento.Properties;
+using CursoCsharp.aula_06_Comportamento_de_Memoria___Arrays___Listas.Referencia___Valor;
 using CursoCsharp.Aula04.Classe.Atributos.Metodos.MetodosEstaticos;
 using System;
 using System.Globalization;
@@ -273,8 +274,6 @@ namespace CursoCsharp
 
 
 
-
-
             /* Aula 52: SOBRECARGA Classe Produto */
             #region              
             /*
@@ -316,8 +315,6 @@ namespace CursoCsharp
             Console.WriteLine("Dados Atualizados: " + p);
             */
             #endregion
-
-
 
 
 
@@ -406,7 +403,7 @@ namespace CursoCsharp
 
             /* Aula 60: Exercício de Fixação Modulo 05 Calsse Conta Bancária */
             #region
-
+            /*
             ContaBancaria conta = new ContaBancaria("Sem Nome", 0000);
 
             
@@ -454,8 +451,54 @@ namespace CursoCsharp
             conta.Saque(quantia);
             Console.WriteLine("Dados atualizados: ");
             Console.WriteLine(conta);
+            */
+            #endregion
+
+
+
+
+
+
+
+            /* Aula 66: Tipos Referência e Tipos Valor */
+            #region
+                                          /* STACK */
+            Point p;                         // Está sendo feito por Valor, logo ele só impreme valores se existir. 
+            p.x = 20;                        // Instânciando sem new é obrigado atribuir valores para impressão.
+            p.y = 30;                        // Aqui ele cria na Stack e imprime a própria Stack.
+            Console.WriteLine(p); 
+
+                                          
+            p = new Point();
+            Console.Write("digite x: ");
+            double valor1 = double.Parse(Console.ReadLine());
+            Console.Write("digite y: ");
+            double valor2 = double.Parse(Console.ReadLine());
+            p.x = valor1;
+            p.y = valor2;
+
+            Console.WriteLine(p);
+
+
 
             #endregion
+
+            /* HEAP */
+            // Aqui ele cria na Stack e aponta na heap, por isso está vazio (0, 0).  
+            // Está sendo feito Referência, logo aparece os zeros por estar vazio.
+            // Intânciar usando new ele inicializa padrão (0 , 0).
+
+
+
+
+
+
+
+
+
+
+
+
 
         }
 
