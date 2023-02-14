@@ -405,25 +405,65 @@ namespace CursoCsharp
 
 
             /* Aula 60: Exercício de Fixação Modulo 05 Calsse Conta Bancária */
+            #region
 
-            ContaBancaria conta = new ContaBancaria("Marcia", 2635, 500, 200);
+            ContaBancaria conta = new ContaBancaria("Sem Nome", 0000);
 
             
-            Console.Write("Entre com número da conta: " + conta.Conta);
-                    
-           
+            // Criando as variáveis auxiliares para receber os valores digitados:
+            Console.Write("Entre com núemero da conta: ");
+            int numero = int.Parse(Console.ReadLine());
+
+            Console.Write("Titular da conta: ");
+            string nome = Console.ReadLine();
+
+            Console.Write("Haverá deposito incial? (S/N)");
+            char opcao = char.Parse(Console.ReadLine());
 
 
+            // Criando o condicional if para decidir se haverá deposito inicial: 
+            if(opcao == 's')
+            {
+                Console.Write("Digite o valor do deposito incial: ");
+                double depositoInicial = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                conta = new ContaBancaria(nome, numero, depositoInicial);  // Atibuindo as variáveis auxiliares a classe primcipal. 
+            }
+            else
+            {
+                conta = new ContaBancaria(nome, numero);    //Segundo modelo de contrutor caso não exista deposito inicial;
+            }
 
+            // Imprimindo os dados da conta atualizados:
+            Console.WriteLine();
+            Console.WriteLine("Dados da Conta:");
+            Console.WriteLine(conta);
 
+            // Chamando o Método Deposito:
+            Console.WriteLine();
+            Console.Write("Entre com valor para deposito: ");
+            double quantia = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            conta.Deposito(quantia);
+            Console.WriteLine("Dados atualizados: ");
+            Console.WriteLine(conta);
 
+            
+            // Chamando o Método Saque:
+            Console.WriteLine();
+            Console.Write("Entre com valor para Saque: ");
+            quantia = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            conta.Saque(quantia);
+            Console.WriteLine("Dados atualizados: ");
+            Console.WriteLine(conta);
 
-
+            #endregion
 
         }
 
 
+
     }
+
+
 
 }
 
