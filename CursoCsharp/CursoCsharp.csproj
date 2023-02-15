@@ -11,8 +11,4 @@
     <PackageReference Include="FakeItEasy" Version="7.3.1" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="aula-06 Comportamento de Memoria - Arrays - Listas\Vetores\" />
-  </ItemGroup>
-
 </Project>

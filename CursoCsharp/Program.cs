@@ -2,6 +2,7 @@
 using CursoCsharp.Aula_05_Construtores_Palavra_this_Sobrecarga_Encapsulamento.Encapsulamento;
 using CursoCsharp.Aula_05_Construtores_Palavra_this_Sobrecarga_Encapsulamento.exe.conta.bancaria;
 using CursoCsharp.Aula_05_Construtores_Palavra_this_Sobrecarga_Encapsulamento.Properties;
+using CursoCsharp.aula_06_Comportamento_de_Memoria___Arrays___Listas.exe.fixação.vetores;
 using CursoCsharp.aula_06_Comportamento_de_Memoria___Arrays___Listas.Referencia___Valor;
 using CursoCsharp.Aula04.Classe.Atributos.Metodos.MetodosEstaticos;
 using System;
@@ -462,41 +463,70 @@ namespace CursoCsharp
 
             /* Aula 66: Tipos Referência e Tipos Valor */
             #region
-                                          /* STACK */
-            Point p;                         // Está sendo feito por Valor, logo ele só impreme valores se existir. 
-            p.x = 20;                        // Instânciando sem new é obrigado atribuir valores para impressão.
-            p.y = 30;                        // Aqui ele cria na Stack e imprime a própria Stack.
-            Console.WriteLine(p); 
+            /* STACK */
+            /* Point p;                         // Está sendo feito por Valor, logo ele só impreme valores se existir. 
+             p.x = 20;                        // Instânciando sem new é obrigado atribuir valores para impressão.
+             p.y = 30;                        // Aqui ele cria na Stack e imprime a própria Stack.
+             Console.WriteLine(p); 
 
-                                          
-            p = new Point();
-            Console.Write("digite x: ");
-            double valor1 = double.Parse(Console.ReadLine());
-            Console.Write("digite y: ");
-            double valor2 = double.Parse(Console.ReadLine());
-            p.x = valor1;
-            p.y = valor2;
+             */
+            /* p = new Point();
+             Console.Write("digite x: ");
+             double valor1 = double.Parse(Console.ReadLine());           /* HEAP */
+            /* Console.Write("digite y: ");                              // Aqui ele cria na Stack e aponta na heap, por isso está vazio (0, 0). 
+             double valor2 = double.Parse(Console.ReadLine());           // Está sendo feito Referência, logo aparece os zeros por estar vazio.
+             p.x = valor1;                                               // Intânciar usando new ele inicializa padrão (0 , 0).
+             p.y = valor2;
 
-            Console.WriteLine(p);
+             Console.WriteLine(p);
+             */
+
 
 
 
             #endregion
 
-            /* HEAP */
-            // Aqui ele cria na Stack e aponta na heap, por isso está vazio (0, 0).  
-            // Está sendo feito Referência, logo aparece os zeros por estar vazio.
-            // Intânciar usando new ele inicializa padrão (0 , 0).
 
 
 
 
+            /* Aula 71: Exercício de Fixação Vetores: */
+            #region
+            /*
+            AluguelQuartos[] vect = new AluguelQuartos[10];
 
+            Console.Write("Quantos quartos serão alugados? ");
+            int n = int.Parse(Console.ReadLine());
+           
 
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine("Alugeul #" + i + ":");
+                Console.Write("Nome: ");
+                string name = Console.ReadLine();                
 
+                Console.Write("Email: ");
+                string email = Console.ReadLine();               
 
+                Console.Write("Quarto: ");
+                int quarto = int.Parse(Console.ReadLine());
+                vect[quarto] = new AluguelQuartos(name, email);
+                Console.WriteLine();           
+                          
+            }
 
+            Console.WriteLine("Quartos Ocupados: ");
+            for (int i = 0; i < 10; i++)
+            {
+                if (vect[i] != null)
+                {
+                    Console.WriteLine(i + ":" + vect[i].Name + "," + vect[i].Email);
+                }
+            }
 
+            */
+
+            #endregion
 
 
 
