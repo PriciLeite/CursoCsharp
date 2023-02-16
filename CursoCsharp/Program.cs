@@ -8,6 +8,8 @@ using CursoCsharp.aula_06_Comportamento_de_Memoria___Arrays___Listas.Referencia_
 using CursoCsharp.Aula04.Classe.Atributos.Metodos.MetodosEstaticos;
 using System;
 using System.Globalization;
+using System.Collections.Generic;
+using CursoCsharp.aula_06_Comportamento_de_Memoria___Arrays___Listas.Listas;
 
 namespace CursoCsharp
 {
@@ -460,8 +462,6 @@ namespace CursoCsharp
 
 
 
-
-
             /* Aula 66: Tipos Referência e Tipos Valor */
             #region
             /* STACK */
@@ -547,6 +547,134 @@ namespace CursoCsharp
             Console.WriteLine(resulta);
             */
             #endregion
+
+
+
+
+
+            /* Aula 76: LISTAS */
+            #region
+            /*
+            List<string> list = new List<string>();
+
+            list.Add("Maria");
+            list.Add("Diana");
+            list.Add("Barbara");
+            list.Add("Debora");
+            list.Add("Beatriz");
+            list.Insert(1, "André");
+
+            foreach (string obj in list)
+                Console.WriteLine(obj);
+            Console.WriteLine("Usando List Count: " + list.Count);
+
+            Console.WriteLine("================================");
+
+            // Primeira ocorrência de quem começa com 'D':
+            string s1 = list.Find(x => x[0] == 'D');
+            Console.WriteLine("First 'D': " + s1);
+
+            // Última ocorrência de quem começa com 'M': 
+            string s2 = list.FindLast(x => x[0] == 'M');
+            Console.WriteLine("Last 'M': " + s2);
+
+            // Primeira posição de quem começa com a letra 'B':          
+            int pos1 = list.FindIndex(x => x[0] == 'B');
+            Console.WriteLine("Index posicion 'B': " + pos1);
+
+            // Última posição de quem começa com a letra 'B':        
+            int pos2 = list.FindLastIndex(x => x[0] == 'B');
+            Console.WriteLine("Index posicion 'B': " + pos2);
+
+            // Filtrando os caracteres com base no tamanho do obj:
+            Console.WriteLine("===================================");
+            Console.WriteLine("Filtrando os caracteres com base no tamanho do obj:");
+            List<string> list2 = list.FindAll(x => x.Length == 5);
+            foreach (string obj in list2)
+            {
+                Console.WriteLine(obj);
+            }
+
+            // Remover elementos da lista:
+            list.Remove("Debora");
+            Console.WriteLine("======== Remove 'Debora' ================");
+            foreach (string obj in list)
+            {
+                Console.WriteLine(obj); 
+            }
+
+            list.RemoveAll(x => x[0] == 'B');
+            Console.WriteLine("========== RemoveAll 'B'=================");
+            foreach (string obj in list)
+            {
+                Console.WriteLine(obj); 
+            }
+
+            list.RemoveAt(1);
+            Console.WriteLine("======== RemoveAt (2) ====================");
+            foreach (string obj in list)
+            {
+                Console.WriteLine(obj);
+            }
+
+            list.RemoveRange(1, 1);
+            Console.WriteLine(" ======= Remove Range (1, 1) a partir do 1º -> 1 ====");
+            foreach (string obj in list)
+            {
+                Console.WriteLine(obj);
+            }
+            */
+            #endregion
+
+
+
+
+            /* Aula 78: Exercício de fixação ->>> RESOLVENDO POR LISTAS AO INVÉS DE VETOR */
+
+            Console.Write("Quantas pessoas serão cadastradas: ");
+            int n = int.Parse(Console.ReadLine());
+
+            List<Employee> list = new List<Employee>();   //Intamciação da lista
+
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine($"Funcionário #{i+1}:");
+                
+                Console.Write("Id: ");
+                int id = int.Parse(Console.ReadLine());
+                
+                Console.Write("Nome: ");
+                string name = Console.ReadLine();
+                
+                Console.Write("Salário: ");
+                double salary = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                list.Add(new Employee(id, name, salary));   //Adicionando à lista.
+
+                Console.WriteLine("====================");
+            }
+
+
+            Console.Write("Digite Id para alterar salário: ");
+            int id2 = int.Parse(Console.ReadLine());
+
+            Employee s = list.Find(x => x.Id == id2);   //Verificando a ocorrência do id2 digitado.
+            if (s != null)
+            {
+                Console.Write("Digite a porcentagem: ");
+                double porcentagem = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                s.AumentoSalario(porcentagem);
+            }
+            else
+            {
+                Console.WriteLine("Id não existe!!! ");            
+            }
+
+            Console.WriteLine();
+            foreach (Employee obj in list) 
+            {
+                Console.WriteLine(obj);
+            }
 
 
 
