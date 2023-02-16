@@ -630,7 +630,8 @@ namespace CursoCsharp
 
 
             /* Aula 78: Exercício de fixação ->>> RESOLVENDO POR LISTAS AO INVÉS DE VETOR */
-
+            #region
+            /*
             Console.Write("Quantas pessoas serão cadastradas: ");
             int n = int.Parse(Console.ReadLine());
 
@@ -670,11 +671,88 @@ namespace CursoCsharp
                 Console.WriteLine("Id não existe!!! ");            
             }
 
+            // Percorrendo a lista: 
             Console.WriteLine();
             foreach (Employee obj in list) 
             {
                 Console.WriteLine(obj);
             }
+           */
+            #endregion
+
+
+
+
+            /* Aula-79: Matrizes   */
+            #region
+
+            // Instânciando uma matriz:
+            /*
+            double[,] mat = new double[2, 3];
+
+            // Altura da Matriz:
+            Console.WriteLine(mat.Length);
+
+            // Qte de linhas:
+            Console.WriteLine(mat.Rank);
+
+            // Dimensão da posição (0 - Coluna):
+            Console.WriteLine(mat.GetLength(0));
+
+            // Dimensão da posição (1 - Linha):
+            Console.WriteLine(mat.GetLength(1));
+            */
+            #endregion
+
+
+
+
+            // Aula-80 Exercício Resolvido :
+            #region
+            /*
+            Console.Write("Tamanho da Matriz (n): ");
+            int n = int.Parse(Console.ReadLine());
+
+            int[,] mat = new int[n, n];
+
+            // Percorrendo a matriz mat[i , j] e salvando os valores:
+
+            for (int i = 0; i < n; i++)
+            {
+                string[] values = Console.ReadLine().Split(' ');
+
+                for (int j = 0; j < n; j++)
+                {
+                    mat[i, j] = int.Parse(values[j]);            
+                }
+                
+            }
+
+            //Encontrando a diágonal -> mat[i,i] pq a linha == coluna na diágonal:
+            Console.WriteLine("Diagonal Principal: ");
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write( mat[i,i] + "  ");
+            }
+            Console.WriteLine();
+
+
+            // Contar quantos são os elementos negativos:
+            int Count = 0;
+
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    if (mat[i, j] < 0)
+                    {
+                        Count++;
+                    }
+                }
+            }
+            Console.WriteLine("Negative Numbers: " + Count);
+            */
+            #endregion
 
 
 
