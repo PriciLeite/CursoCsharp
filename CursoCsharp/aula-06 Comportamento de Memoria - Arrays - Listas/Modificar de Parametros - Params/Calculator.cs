@@ -2,7 +2,7 @@
 {
     internal class Calculator
     {
-        /* Não é ideal por ser repetitivo:
+        /* Não é ideal por ser repetitivo: */
          
             public static int Sum(int n1, int n2) {
                 return n1 + n2;
@@ -14,13 +14,13 @@
                 return n1 + n2 + n3 + n4;
             }
           
-         */
+         
 
 
 
 
         // Criando uma classe e fazendo a solução com VETOR:
-       /*
+       
         public static int Sum(int[] numbers)
         {
             int sum = 0;
@@ -30,11 +30,11 @@
             }
             return sum;
         }
-       */
+       
 
 
         // Criando a Classe e fazendo a Solução com modificador params:
-        public static int Sum(params int[] numbers)
+        public static int Sum_(params int[] numbers)
         {
             int sum = 0;
             for (int i = 0; i < numbers.Length; i++)
