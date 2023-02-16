@@ -3,6 +3,7 @@ using CursoCsharp.Aula_05_Construtores_Palavra_this_Sobrecarga_Encapsulamento.En
 using CursoCsharp.Aula_05_Construtores_Palavra_this_Sobrecarga_Encapsulamento.exe.conta.bancaria;
 using CursoCsharp.Aula_05_Construtores_Palavra_this_Sobrecarga_Encapsulamento.Properties;
 using CursoCsharp.aula_06_Comportamento_de_Memoria___Arrays___Listas.exe.fixação.vetores;
+using CursoCsharp.aula_06_Comportamento_de_Memoria___Arrays___Listas.Params;
 using CursoCsharp.aula_06_Comportamento_de_Memoria___Arrays___Listas.Referencia___Valor;
 using CursoCsharp.Aula04.Classe.Atributos.Metodos.MetodosEstaticos;
 using System;
@@ -527,6 +528,27 @@ namespace CursoCsharp
             */
 
             #endregion
+
+
+
+
+
+            /* Aula 72: Modificador de Parâmetros - PARAMS: */
+            #region
+            /*
+            // Criando uma classe e fazendo a solução com VETOR:
+            int result = Calculator.Sum(new int[] { 10, 20, 30, 40 });
+            Console.WriteLine(result);
+
+
+
+            // Criando a Classe e fazendo a Solução com modificador Params:
+            int resulta = Calculator.Sum(10, 20, 30, 40);
+            Console.WriteLine(resulta);
+            */
+            #endregion
+
+
 
 
 
