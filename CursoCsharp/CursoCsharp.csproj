@@ -12,7 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="aula-06 Comportamento de Memoria - Arrays - Listas\Matriz\" />
+    <Folder Include="aula-06 Comportamento de Memoria - Arrays - Listas\Listas\Aula 76 a 78 exercicio\" />
+    <Folder Include="aula-06 Comportamento de Memoria - Arrays - Listas\Matriz\Aula-80 exercicio\" />
   </ItemGroup>
 
 </Project>

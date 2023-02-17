@@ -707,7 +707,7 @@ namespace CursoCsharp
 
 
 
-            // Aula-80 Exercício Resolvido :
+            // Aula-80 Exercício Resolvido Matriz :
             #region
             /*
             Console.Write("Tamanho da Matriz (n): ");
@@ -757,13 +757,90 @@ namespace CursoCsharp
 
 
 
+            // Aula-81 Exercício de Fixação MAtriz:
+            #region
+            
+            
+            Console.WriteLine("========= Montando uma Matriz ===========");
 
+            Console.Write("Digite número para linhas: ");
+            int m = int.Parse(Console.ReadLine());
+
+            Console.Write("Digite número para Colunas: ");
+            int n = int.Parse(Console.ReadLine());
+            Console.WriteLine("=======================");
+
+            Console.WriteLine("Digite os valores da matriz dando espaço entre os números: ");
+            int[,] mat = new int[m, n];    // Matriz
+
+            for (int i = 0; i < m; i++)
+            {
+                string[] values = Console.ReadLine().Split(' '); //Recebe o valor como **String**
+
+                for (int j = 0; j < n; j++)
+                {
+                    mat[i , j] = int.Parse(values[j]); // Transforma o valor em decimal e salva na coluna 'j'
+                }
+            }
+            
+            Console.WriteLine();
+            Console.Write("Digite número para verificar: ");
+            int x = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < m; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    if (mat[i, j] == x)
+                    {
+                        Console.WriteLine("==============");
+                        Console.WriteLine("Posição: " + i + "," + j + ":");
+
+
+                        if (j > 0)
+                        {
+                            Console.WriteLine("Left: " + mat[i, j - 1]);
+                        }
+
+                        if (i > 0)
+                        {
+                            Console.WriteLine("Up: " + mat[i - 1, j]);
+                        }
+
+                        if (j < n - 1)
+                        {
+                            Console.WriteLine("Right: " + mat[i, j + 1]);
+                        }
+
+                        if (i < m - 1)
+                        {
+                            Console.WriteLine("Down: " + mat[i + 1, j]);
+                        }
+                    
+                    }
+               
+                }
+           
+           
+            }
+            #endregion        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         }
 
 
-
     }
-
 
 
 }
