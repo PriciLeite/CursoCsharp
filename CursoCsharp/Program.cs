@@ -759,8 +759,8 @@ namespace CursoCsharp
 
             // Aula-81 Exercício de Fixação MAtriz:
             #region
-            
-            
+
+            /*
             Console.WriteLine("========= Montando uma Matriz ===========");
 
             Console.Write("Digite número para linhas: ");
@@ -823,20 +823,16 @@ namespace CursoCsharp
            
            
             }
-            #endregion        
+            */
+            #endregion
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+            
+
+
+
         }
 
 
