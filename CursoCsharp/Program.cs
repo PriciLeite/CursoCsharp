@@ -10,6 +10,8 @@ using System;
 using System.Globalization;
 using System.Collections.Generic;
 using CursoCsharp.aula_06_Comportamento_de_Memoria___Arrays___Listas.Listas;
+using CursoCsharp.aula_09_Enumeracoes_Composicoes.Entities;
+using CursoCsharp.aula_09_Enumeracoes_Composicoes.Entities.Enuns;
 
 namespace CursoCsharp
 {
@@ -828,8 +830,38 @@ namespace CursoCsharp
 
 
 
+            // Aula-124 Enumerações:
+            #region
+            /*
+            Order order = new Order
+            {
+                Id = 1,
+                Moment = DateTime.Now,
+                Status = OrderStatus.PadingPayment
+            };
 
-            
+            Console.WriteLine(order);
+
+            // Converter o tipo Enumerado para String: **** 
+            string txt = OrderStatus.PadingPayment.ToString();
+
+            // Converte o tipo String para Enumerado: ****
+            OrderStatus os = Enum.Parse<OrderStatus>("Delivered");
+
+            Console.WriteLine(os);
+            Console.WriteLine(txt);
+            */
+
+
+            #endregion
+
+
+
+
+
+
+
+
 
 
 
@@ -840,4 +872,7 @@ namespace CursoCsharp
 
 
 }
+
+
+
 

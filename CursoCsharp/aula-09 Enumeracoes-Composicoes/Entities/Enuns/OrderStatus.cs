@@ -1,7 +1,6 @@
 ﻿
 
-
-namespace CursoCsharp.aula_09_Enumeracoes_Composicoes.Entities.Enum
+namespace CursoCsharp.aula_09_Enumeracoes_Composicoes.Entities.Enuns
 {
     enum OrderStatus : int
     {        
