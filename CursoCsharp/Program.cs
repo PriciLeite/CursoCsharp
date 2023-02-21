@@ -14,6 +14,7 @@ using CursoCsharp.aula_09_Enumeracoes_Composicoes.Entities;
 using CursoCsharp.aula_09_Enumeracoes_Composicoes.Entities.Enuns;
 using CursoCsharp.aula_09_Enumeracoes_Composicoes.Composicao.Entities.Enums;
 using CursoCsharp.aula_09_Enumeracoes_Composicoes.Composicao.Entities;
+using CursoCsharp.aula_09_Enumeracoes_Composicoes.stringBuilder.Entities;
 
 namespace CursoCsharp
 {
@@ -864,7 +865,7 @@ namespace CursoCsharp
 
             // Aula-128 Exercicio Sobre -> Enumerações e Composição -> Diagrama da aula:
             #region
-
+            /*
             Console.Write("Enter Departament's name: ");
             string departamento = Console.ReadLine();
 
@@ -918,23 +919,59 @@ namespace CursoCsharp
                 Console.WriteLine("Name: " + worker.Name);
                 Console.WriteLine("Departament: " + worker.Departament.Name);
                 Console.WriteLine("Icome for: " + monthAndyear + ":" + "$" + worker.Income(year, month).ToString("F2", CultureInfo.InvariantCulture));
-                
-            
-            
-            
-            
-
-
-
-
-
-
-
-
+                */
 
             #endregion
 
+
+
+
+
+            // Aula-131 Exercicio Sobre -> Enumerações e Composição (demo StringBuilder):
+            // OBS: Exercicio exemplificando a relação de Post -> Comentários. 
+
+
+            Comment c1 = new Comment("Have a nice trip! ");
+            Comment c2 = new Comment("Wow that's awesome!");
+
+            Post p1 = new Post(
+                DateTime.Parse("21/06/2018 13:05:44"),
+                "Traveling to new Zealand",
+                "I'm going to visit this wonderful country!",
+                12);
+
+            p1.AddComment(c1);
+            p1.AddComment(c2);
+
+
+            Comment c3 = new Comment("Good nigth!");
+            Comment c4 = new Comment("May the Force be with you!");
+
+            Post p2 = new Post(
+                DateTime.Now,
+                "Good night guys",
+                "See you Tomorrow",
+                10);
+            
+            p2.AddComment(c3);
+            p2.AddComment(c4);
+
+            Console.WriteLine(p1);
+            Console.WriteLine(p2);
+
+
         }
+
+
+
+
+
+
+
+
+
+
+
 
 
     }
