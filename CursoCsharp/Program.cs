@@ -917,7 +917,7 @@ namespace CursoCsharp
 
                 Console.WriteLine("Name: " + worker.Name);
                 Console.WriteLine("Departament: " + worker.Departament.Name);
-                Console.WriteLine("Icome for: " + monthAndyear + ":" + "$" + worker.Income(year, month));
+                Console.WriteLine("Icome for: " + monthAndyear + ":" + "$" + worker.Income(year, month).ToString("F2", CultureInfo.InvariantCulture));
                 
             
             
