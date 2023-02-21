@@ -12,6 +12,8 @@ using System.Collections.Generic;
 using CursoCsharp.aula_06_Comportamento_de_Memoria___Arrays___Listas.Listas;
 using CursoCsharp.aula_09_Enumeracoes_Composicoes.Entities;
 using CursoCsharp.aula_09_Enumeracoes_Composicoes.Entities.Enuns;
+using CursoCsharp.aula_09_Enumeracoes_Composicoes.Composicao.Entities.Enums;
+using CursoCsharp.aula_09_Enumeracoes_Composicoes.Composicao.Entities;
 
 namespace CursoCsharp
 {
@@ -590,6 +592,7 @@ namespace CursoCsharp
 
             // Filtrando os caracteres com base no tamanho do obj:
             Console.WriteLine("===================================");
+
             Console.WriteLine("Filtrando os caracteres com base no tamanho do obj:");
             List<string> list2 = list.FindAll(x => x.Length == 5);
             foreach (string obj in list2)
@@ -859,11 +862,77 @@ namespace CursoCsharp
 
 
 
+            // Aula-128 Exercicio Sobre -> Enumerações e Composição -> Diagrama da aula:
+            #region
+
+            Console.Write("Enter Departament's name: ");
+            string departamento = Console.ReadLine();
+
+            Console.WriteLine("Enter Work Data: ");
+            Console.Write("Name: ");
+            string name = Console.ReadLine();
+
+            Console.Write("Level (Junior / MidLevel / Senior): ");
+            WorkLevel level = Enum.Parse<WorkLevel>(Console.ReadLine()); //***** 
+
+            Console.Write("Base Salary: ");
+            double baseSalary = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.WriteLine();
+
+            // Instânciando as Classes:
+            Departament dept = new Departament(departamento);
+            Worker worker = new Worker(name, level, baseSalary, dept);
+
+
+
+            Console.Write("How many contracts to this worker? ");
+            int n = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine($"Enter contract #{i + 1} Data:");
+
+                Console.Write("Date(DD/MM/YYYY): ");
+                DateTime date = DateTime.Parse(Console.ReadLine());
+
+                Console.Write("Value per hour: ");
+                double valuePerHour = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+                Console.Write("Duration(hours): ");
+                int hours = int.Parse(Console.ReadLine());
+
+
+                // Instânciando a Classe:
+                HourContract contract = new HourContract(date, valuePerHour, hours);
+
+                // Atribuindo o contrato que foi criado ao trabalhador:
+                // Perceba que o trabalhador vai receber todos os contratos que forem digitados no for:
+                worker.AddContract(contract);
+            }
+                Console.WriteLine();
+                Console.Write("Enter month and year to calculete income (MM/YYYY): ");
+                string monthAndyear = Console.ReadLine();                
+                int month = int.Parse(monthAndyear.Substring(0, 2));
+                int year = int.Parse(monthAndyear.Substring(3));
+
+                Console.WriteLine("Name: " + worker.Name);
+                Console.WriteLine("Departament: " + worker.Departament.Name);
+                Console.WriteLine("Icome for: " + monthAndyear + ":" + "$" + worker.Income(year, month));
+                
+            
+            
+            
+            
 
 
 
 
 
+
+
+
+
+            #endregion
 
         }
 
