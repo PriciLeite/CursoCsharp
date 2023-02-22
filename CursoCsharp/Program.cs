@@ -15,7 +15,7 @@ using CursoCsharp.aula_09_Enumeracoes_Composicoes.Composicao.Entities;
 using CursoCsharp.aula_09_Enumeracoes_Composicoes.stringBuilder.Entities;
 using CursoCsharp.aula_09_Enumeracoes_Composicoes.Exe_Fixacao.Entities;
 using CursoCsharp.aula_09_Enumeracoes_Composicoes.Exe_Fixacao.Entities.Enums;
-
+using CursoCsharp.aula_10_Heranca_Polimorfismo.Heranca.Entities;
 
 namespace CursoCsharp
 {
@@ -1017,6 +1017,25 @@ namespace CursoCsharp
             Console.WriteLine(order);
             */
             #endregion
+
+
+
+
+            // CAP 10: HERANÇA E POLIMORFISMO - Aula-135 Herança 
+            #region
+            /*
+            // Instânciar a classe BusinesAccount para verificar:
+            //Balance { get; Protected set; }
+
+            BusinessAccount account = new BusinessAccount(8001, "Priscila Leite", 1000, 5000);
+
+            Console.WriteLine(account.Number);
+
+            account.Balance = 500;   // ----> Neste caso o Protected não permite fazer alterações.
+            */
+            #endregion
+
+
 
 
 
