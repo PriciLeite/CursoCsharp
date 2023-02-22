@@ -10,11 +10,12 @@ using System;
 using System.Globalization;
 using System.Collections.Generic;
 using CursoCsharp.aula_06_Comportamento_de_Memoria___Arrays___Listas.Listas;
-using CursoCsharp.aula_09_Enumeracoes_Composicoes.Entities;
-using CursoCsharp.aula_09_Enumeracoes_Composicoes.Entities.Enuns;
 using CursoCsharp.aula_09_Enumeracoes_Composicoes.Composicao.Entities.Enums;
 using CursoCsharp.aula_09_Enumeracoes_Composicoes.Composicao.Entities;
 using CursoCsharp.aula_09_Enumeracoes_Composicoes.stringBuilder.Entities;
+using CursoCsharp.aula_09_Enumeracoes_Composicoes.Exe_Fixacao.Entities;
+using CursoCsharp.aula_09_Enumeracoes_Composicoes.Exe_Fixacao.Entities.Enums;
+
 
 namespace CursoCsharp
 {
@@ -929,8 +930,8 @@ namespace CursoCsharp
 
             // Aula-131 Exercicio Sobre -> Enumerações e Composição (demo StringBuilder):
             // OBS: Exercicio exemplificando a relação de Post -> Comentários. 
-
-
+            #region
+            /*
             Comment c1 = new Comment("Have a nice trip! ");
             Comment c2 = new Comment("Wow that's awesome!");
 
@@ -958,20 +959,68 @@ namespace CursoCsharp
 
             Console.WriteLine(p1);
             Console.WriteLine(p2);
+            */
+            #endregion
+
+
+
+
+            //Aula-134 Exercício de Fixação -> 
+            #region
+            /*
+            Console.WriteLine("Enter Client Data: ");
+            Console.Write("Name: ");
+            string name = Console.ReadLine();
+            Console.Write("Email: ");
+            string email = Console.ReadLine();
+            Console.Write("Birth Date (dd/MM/yyyy): ");
+            DateTime date = DateTime.Parse(Console.ReadLine());           
+
+            Console.WriteLine("Enter Order Data: ");           
+            Console.Write("Status: ");
+            OrderStatus status = Enum.Parse<OrderStatus>(Console.ReadLine());
+
+            // Instanciação Cliente:
+            Client client = new Client(name, email, date);
+
+            // Instanciação Cliente Pedido:
+            Order order = new Order(DateTime.Now, status, client);
+            Console.WriteLine();
+           
+
+            Console.Write("How many items to this order? ");
+            int n = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine($"Enter #{i+1} item data:");
+                Console.Write("Product name: ");
+                string productName = Console.ReadLine();
+                Console.Write("Product price: ");
+                double price = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+                // Instanciação Produto:
+                Product product = new Product(productName, price);
+
+                Console.Write("Quantity: ");
+                int quantity = int.Parse(Console.ReadLine());
+
+                //Instanciação Produto + quantidade:
+                OrderItem orderItem = new OrderItem(quantity, price, product);
+
+                order.AddItem(orderItem);
+
+            }
+            
+            Console.WriteLine();
+            Console.WriteLine("ORDER SUMMARY:");
+            Console.WriteLine(order);
+            */
+            #endregion
+
 
 
         }
-
-
-
-
-
-
-
-
-
-
-
 
 
     }
