@@ -1040,7 +1040,8 @@ namespace CursoCsharp
 
 
             // Aula-136 ---> Polimorfismo (continuação da aula 135...)
-            
+            #region
+            /*
             // Intânciando um obj Account:
             Account acc = new Account(8010, "Alex", 0.0);
 
@@ -1075,8 +1076,8 @@ namespace CursoCsharp
             {
                 BusinessAccount acc5 = (BusinessAccount)acc3;
             }
-           
-
+            */
+            #endregion
 
 
 
