@@ -1039,6 +1039,52 @@ namespace CursoCsharp
 
 
 
+            // Aula-136 ---> Polimorfismo (continuação da aula 135...)
+            
+            // Intânciando um obj Account:
+            Account acc = new Account(8010, "Alex", 0.0);
+
+            // Intânciando um obj BusinessAccount:
+            BusinessAccount bacc = new BusinessAccount(1818, "Maria", 0.0, 1000.0);
+
+                           //OBS: BusinesAccount > é um < Account 
+
+
+            //UPCASTING
+            Account acc1 = bacc;  
+            Console.WriteLine(acc1.Number + "  " + acc1.Holder + "  " + acc1.Balance);
+
+            Account acc2 = new BusinessAccount(100, "Dora", 0.0, 1000.0);
+            Account acc3 = new SavingsAccount(1004, "Ana", 0.0, 0.1);
+            
+            // Não consegue imprimir o LoanLimite pq ele não exite em Account!!!
+            Console.WriteLine(acc2.Number + "  " + acc2.Holder + "  " + acc2.Balance);
+            Console.WriteLine();
+
+
+
+            //DOWNCASTING
+            //BusinessAccount acc4 =  (BusinessAccount)acc2; //CASTING   OU -->>>
+            BusinessAccount acc4 = acc3 as BusinessAccount;
+            acc4.Loan(100.0);
+
+           // BusinessAccount acc5 = (BusinessAccount)acc3;
+           // ---> acc3 não BusinesAccount e o compilador não reconheceu o erro...
+
+            if (acc3 is BusinessAccount)   //verificando...
+            {
+                BusinessAccount acc5 = (BusinessAccount)acc3;
+            }
+           
+
+
+
+
+
+
+
+
+
         }
 
 
