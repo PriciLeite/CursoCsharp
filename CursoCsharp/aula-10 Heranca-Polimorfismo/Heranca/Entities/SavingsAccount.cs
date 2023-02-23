@@ -22,7 +22,16 @@ namespace CursoCsharp.aula_10_Heranca_Polimorfismo.Heranca.Entities
         {
             Balance = Balance * InterestRate;
         }
-    
+
+        //Método Sobrescrito da Super Classe Account para eliminar o desconto de $5.0:
+        public override void Withdraw(double amount)
+        {
+            //Descontando o valor do Account + $2.0
+            base.Withdraw(amount);
+            Balance -= 2.0;
+        }
+
+
 
 
     }

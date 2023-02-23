@@ -9,14 +9,15 @@ using CursoCsharp.Aula04.Classe.Atributos.Metodos.MetodosEstaticos;
 using System;
 using System.Globalization;
 using System.Collections.Generic;
-using CursoCsharp.aula_06_Comportamento_de_Memoria___Arrays___Listas.Listas;
+//using CursoCsharp.aula_06_Comportamento_de_Memoria___Arrays___Listas.Listas;
 using CursoCsharp.aula_09_Enumeracoes_Composicoes.Composicao.Entities.Enums;
 using CursoCsharp.aula_09_Enumeracoes_Composicoes.Composicao.Entities;
 using CursoCsharp.aula_09_Enumeracoes_Composicoes.stringBuilder.Entities;
 using CursoCsharp.aula_09_Enumeracoes_Composicoes.Exe_Fixacao.Entities;
 using CursoCsharp.aula_09_Enumeracoes_Composicoes.Exe_Fixacao.Entities.Enums;
 using CursoCsharp.aula_10_Heranca_Polimorfismo.Heranca.Entities;
-
+using CursoCsharp.aula_10_Heranca_Polimorfismo.exe.resolvido.Entities;
+using CursoCsharp.aula_10_Heranca_Polimorfismo.exe.resolvido.Entities;
 namespace CursoCsharp
 {
     internal class Program
@@ -1039,7 +1040,7 @@ namespace CursoCsharp
 
 
 
-            // Aula-136 ---> Polimorfismo (continuação da aula 135...)
+            // Aula-136 ---> (continuação da aula 135...)
             #region
             /*
             // Intânciando um obj Account:
@@ -1081,16 +1082,84 @@ namespace CursoCsharp
 
 
 
+            // Aula- 137 -> Sobreposição ou sobrescrita: "virtual" e "override"
+            #region
+            /*
+            Account acc1 = new Account(1013, "Alex", 500.0);
+            Account acc2 = new SavingsAccount(1014, "Marta", 500.0, 0.1);
+
+            acc1.Withdraw(10.0);
+            acc2.Withdraw(10.0);
+            Console.WriteLine(acc1.Balance);
+            Console.WriteLine(acc2.Balance);
+            */
+            #endregion
 
 
 
 
 
+            // Aula- 141 -> Exercício resolvido: 
+            #region
+            /*
+            Console.Write("Enter the number of employee: ");
+            int n = int.Parse(Console.ReadLine());
+
+            List<Employee> list = new List<Employee>();
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine();
+                Console.WriteLine($"Employee #{i+1} data:");
+                Console.Write("Outsorced(y/n): ");
+                char opcao = char.Parse(Console.ReadLine());
+                Console.Write("Name: ");
+                string name = Console.ReadLine();
+                Console.Write("Hours: ");
+                int hours = int.Parse(Console.ReadLine());
+                Console.Write("Value Per Hour: ");
+                double valuePerHour = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+                if (opcao =='y')
+                {
+                    Console.Write("Additional Charge: ");
+                    double additionalCharge = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                    list.Add(new OutsourcedEmployee(name, hours, valuePerHour, additionalCharge));
+                }
+
+                else
+                {
+                    list.Add(new Employee(name, hours, valuePerHour));
+                }
+                
+
+            }
+            
+            Console.WriteLine();
+            Console.WriteLine("PAYMENTS: ");
+            foreach (Employee emp in list) 
+            {
+                Console.WriteLine(emp.Name + " - $" + emp.Payment().ToString("F2", CultureInfo.InvariantCulture));
+            }
+            */
+            #endregion
+       
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         }
 
-
     }
-
 
 }
 
