@@ -24,6 +24,7 @@ using Product = CursoCsharp.aula_10_Heranca_Polimorfismo.exe.proposto.Entities.P
 using CursoCsharp.aula_10_Heranca_Polimorfismo.exe.proposto;
 using CursoCsharp.aula_10_Heranca_Polimorfismo.Metodos_Abstratos.Entities;
 using CursoCsharp.aula_10_Heranca_Polimorfismo.Metodos_Abstratos.Entities.Enums;
+using CursoCsharp.aula_10_Heranca_Polimorfismo.exe.proposto.final.Entities;
 
 namespace CursoCsharp
 {
@@ -1254,21 +1255,72 @@ namespace CursoCsharp
            */
             #endregion
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+            // Aula- 146 -> Exercício Propósto -> Classes Abstratas -> Métodos  Abstratos:
+
+
+            Console.Write("Enter the number of tax payers: ");
+            int n = int.Parse(Console.ReadLine());
+
+            List<TaxPayer> list = new List<TaxPayer>();
+
+            for (int i = 1; i <= n; i++)
+            {
+                Console.WriteLine($"Tax Payer #{i} data: ");
+                Console.Write("Individual or Company (i / c):");
+                char opcao = char.Parse(Console.ReadLine());
+                Console.Write("Name: ");
+                string name = Console.ReadLine();
+                Console.Write("Anual Income: ");
+                double anualIncome = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+                if (opcao == 'i')
+                {
+                    Console.Write("Health Expenditures: ");
+                    double healthExpenditures = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                    list.Add(new Individual(name, anualIncome, healthExpenditures));
+                }
+                else
+                {
+                    Console.Write("Number of Employess: ");
+                    int numerOfEmployees = int.Parse(Console.ReadLine());
+                    list.Add(new Company(name, anualIncome, numerOfEmployees));
+                }
+
+            }
+
+            Console.WriteLine();
+            
+            double sum = 0.0;
+            Console.WriteLine("TAXES PAID:");
+            foreach (TaxPayer taxPayer in list) 
+            {                
+                double v = taxPayer.Tax();
+                Console.WriteLine(taxPayer.Name + ":  $" + v.ToString("F2", CultureInfo.InvariantCulture));
+                sum += v;
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("TOTAL TAXES: " + sum.ToString("F2", CultureInfo.InvariantCulture));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
     }
 }
