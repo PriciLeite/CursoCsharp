@@ -1,4 +1,7 @@
-﻿using CursoCsharp.Aula_05_Construtores_Palavra_this_Sobrecarga_Encapsulamento.AutoProperties;
+﻿using System;
+using System.Globalization;
+using System.Collections.Generic;
+using CursoCsharp.Aula_05_Construtores_Palavra_this_Sobrecarga_Encapsulamento.AutoProperties;
 using CursoCsharp.Aula_05_Construtores_Palavra_this_Sobrecarga_Encapsulamento.Encapsulamento;
 using CursoCsharp.Aula_05_Construtores_Palavra_this_Sobrecarga_Encapsulamento.exe.conta.bancaria;
 using CursoCsharp.Aula_05_Construtores_Palavra_this_Sobrecarga_Encapsulamento.Properties;
@@ -6,9 +9,6 @@ using CursoCsharp.aula_06_Comportamento_de_Memoria___Arrays___Listas.exe.fixaç�
 using CursoCsharp.aula_06_Comportamento_de_Memoria___Arrays___Listas.Params;
 using CursoCsharp.aula_06_Comportamento_de_Memoria___Arrays___Listas.Referencia___Valor;
 using CursoCsharp.Aula04.Classe.Atributos.Metodos.MetodosEstaticos;
-using System;
-using System.Globalization;
-using System.Collections.Generic;
 //using CursoCsharp.aula_06_Comportamento_de_Memoria___Arrays___Listas.Listas;
 using CursoCsharp.aula_09_Enumeracoes_Composicoes.Composicao.Entities.Enums;
 using CursoCsharp.aula_09_Enumeracoes_Composicoes.Composicao.Entities;
@@ -22,6 +22,8 @@ using CursoCsharp.aula_10_Heranca_Polimorfismo.exe.proposto.Entities;
 using CursoCsharp.aula_10_Heranca_Polimorfismo.exe.proposto.Entities;
 using Product = CursoCsharp.aula_10_Heranca_Polimorfismo.exe.proposto.Entities.Product;
 using CursoCsharp.aula_10_Heranca_Polimorfismo.exe.proposto;
+using CursoCsharp.aula_10_Heranca_Polimorfismo.Metodos_Abstratos.Entities;
+using CursoCsharp.aula_10_Heranca_Polimorfismo.Metodos_Abstratos.Entities.Enums;
 
 namespace CursoCsharp
 {
@@ -1087,7 +1089,7 @@ namespace CursoCsharp
 
 
 
-           
+
             // Aula- 137 -> Sobreposição ou sobrescrita: "virtual" e "override"
             #region
             /*
@@ -1152,8 +1154,8 @@ namespace CursoCsharp
 
 
 
-           
-            
+
+
             // Aula- 142 -> Exercício Propósto: 
             #region
             /*
@@ -1205,14 +1207,70 @@ namespace CursoCsharp
 
 
 
+            // Aula- 144 -> Exercício Resolvido -> Classes Abstratas -> Métodos Abstratos:
+            #region
+            /*
+            Console.Write("Enter the number of shapes: ");
+            int n = int.Parse(Console.ReadLine());
 
+            List<Shape> list = new List<Shape>();
 
+            for (int i = 1; i <= n; i++)
+            {
+                Console.WriteLine();
+                
+                Console.WriteLine($"Shape #{i} data: ");
+                Console.Write("Rectangle or Circle (r / c) ?");
+                char opcao = char.Parse(Console.ReadLine());
+                Console.Write("Color(Black/ Blue / Red): ");
+                Color color = Enum.Parse<Color>(Console.ReadLine());
+                Console.Write("Width: ");
+                
 
+                if (opcao == 'r')
+                {
+                    double width = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                    Console.Write("Height: ");
+                    double height = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                    
+                    list.Add(new Rectangle(width, height, color));
+                }
 
+                else
+                {
+                    Console.Write("Radius: ");
+                    double radius = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                    list.Add(new Circle(radius, color));
+                }                
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("SHAPE AREAS:");
+           foreach (Shape shape in list) 
+           {
+                Console.WriteLine(shape.Area().ToString("F2", CultureInfo.InvariantCulture));
+
+           }
+           */
+            #endregion
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         }
-
     }
-
 }
 
 
