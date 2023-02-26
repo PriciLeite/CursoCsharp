@@ -9,7 +9,7 @@ using CursoCsharp.aula_06_Comportamento_de_Memoria___Arrays___Listas.exe.fixaç�
 using CursoCsharp.aula_06_Comportamento_de_Memoria___Arrays___Listas.Params;
 using CursoCsharp.aula_06_Comportamento_de_Memoria___Arrays___Listas.Referencia___Valor;
 using CursoCsharp.Aula04.Classe.Atributos.Metodos.MetodosEstaticos;
-//using CursoCsharp.aula_06_Comportamento_de_Memoria___Arrays___Listas.Listas;
+using CursoCsharp.aula_06_Comportamento_de_Memoria___Arrays___Listas.Listas;
 using CursoCsharp.aula_09_Enumeracoes_Composicoes.Composicao.Entities.Enums;
 using CursoCsharp.aula_09_Enumeracoes_Composicoes.Composicao.Entities;
 using CursoCsharp.aula_09_Enumeracoes_Composicoes.stringBuilder.Entities;
@@ -26,6 +26,8 @@ using CursoCsharp.aula_10_Heranca_Polimorfismo.Metodos_Abstratos.Entities;
 using CursoCsharp.aula_10_Heranca_Polimorfismo.Metodos_Abstratos.Entities.Enums;
 using CursoCsharp.aula_10_Heranca_Polimorfismo.exe.proposto.final.Entities;
 using CursoCsharp.aula_11_Tratamento_de_Excecoes.Entities;
+using CursoCsharp.aula_11_Tratamento_de_Excecoes.Entities.Exceptions3;
+using Course.Entities;
 
 namespace CursoCsharp
 {
@@ -1312,9 +1314,10 @@ namespace CursoCsharp
 
 
 
-            // Aula- 152 -> Exercício Resolvido -> Criando exceções personalizadas:
+            // Aula- 152 -> Exercício Resolvido -> OBS: MODO GENÊRICO >>> PERSONALIZADO NA PRÓXIMA AULA...
+            // Criando exceções personalizadas:
             #region
-
+            /*
             Console.Write("Room Number: ");
             int roomNumber = int.Parse(Console.ReadLine());
             Console.Write("Check-In date (dd/MM/yyyy): ");
@@ -1362,12 +1365,68 @@ namespace CursoCsharp
                 }
 
             }
+            */
+            #endregion
 
-            
 
+
+
+            // Aula- 153 -> Exercício Resolvido -> OBS: MODO CORRETO COM (Try/Cath)
+            #region
+            try
+            {
+                Console.Write("Room Number: ");
+                int roomNumber = int.Parse(Console.ReadLine());
+                Console.Write("Check-In date (dd/MM/yyyy): ");
+                DateTime checkIn = DateTime.Parse(Console.ReadLine());
+                Console.Write("Check-Out date (dd/MM/yyyy):  ");
+                DateTime checkOut = DateTime.Parse(Console.ReadLine());
+
+                //instânciar a classe Reservation
+                Reservation reservation = new Reservation(roomNumber, checkIn, checkOut);
+                Console.WriteLine("Reservation: " + reservation);
+
+                Console.WriteLine();
+
+                Console.WriteLine("Enter data to update the reservation:");
+                Console.Write("Check-In date (dd/MM/yyyy): ");
+                checkIn = DateTime.Parse(Console.ReadLine());
+                Console.Write("Check-Out date (dd/MM/yyyy):  ");
+                checkOut = DateTime.Parse(Console.ReadLine());
+
+                //atualizar os dados
+                reservation.UpdateDates(checkIn, checkOut);
+                Console.WriteLine("Reservation: " + reservation);
+            }
+
+            catch (DomianException e)
+            {
+                Console.WriteLine("Erro in reservation: " + e.Message);
+            }
 
 
             #endregion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
     }
 }
