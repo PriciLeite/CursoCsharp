@@ -25,6 +25,7 @@ using CursoCsharp.aula_10_Heranca_Polimorfismo.exe.proposto;
 using CursoCsharp.aula_10_Heranca_Polimorfismo.Metodos_Abstratos.Entities;
 using CursoCsharp.aula_10_Heranca_Polimorfismo.Metodos_Abstratos.Entities.Enums;
 using CursoCsharp.aula_10_Heranca_Polimorfismo.exe.proposto.final.Entities;
+using CursoCsharp.aula_11_Tratamento_de_Excecoes.Entities;
 
 namespace CursoCsharp
 {
@@ -1259,8 +1260,8 @@ namespace CursoCsharp
 
 
             // Aula- 146 -> Exercício Propósto -> Classes Abstratas -> Métodos  Abstratos:
-
-
+            #region
+            /*
             Console.Write("Enter the number of tax payers: ");
             int n = int.Parse(Console.ReadLine());
 
@@ -1304,23 +1305,66 @@ namespace CursoCsharp
 
             Console.WriteLine();
             Console.WriteLine("TOTAL TAXES: " + sum.ToString("F2", CultureInfo.InvariantCulture));
+            */
+            #endregion
 
 
 
 
 
+            // Aula- 152 -> Exercício Resolvido -> Criando exceções personalizadas:
+            #region
+
+            Console.Write("Room Number: ");
+            int roomNumber = int.Parse(Console.ReadLine());
+            Console.Write("Check-In date (dd/MM/yyyy): ");
+            DateTime checkIn = DateTime.Parse(Console.ReadLine());
+            Console.Write("Check-Out date (dd/MM/yyyy):  ");
+            DateTime checkOut = DateTime.Parse(Console.ReadLine());
+
+
+            if (checkOut <= checkIn)
+            {
+                Console.WriteLine("Erro na data de reserva! ");
+            }
+
+            else
+            {
+                Reservation reservation = new Reservation(roomNumber, checkIn, checkOut);
+                Console.WriteLine("Reservation: " + reservation);
+
+                Console.WriteLine();
+                Console.WriteLine("Enter data to update the reservation:");
+                Console.Write("Check-In date (dd/MM/yyyy): ");
+                checkIn = DateTime.Parse(Console.ReadLine());
+                Console.Write("Check-Out date (dd/MM/yyyy):  ");
+                checkOut = DateTime.Parse(Console.ReadLine());
+
+                DateTime now = DateTime.Now;
+
+                if (checkIn < now || checkOut < now)
+                {
+                    Console.WriteLine("Erro in reservation: Reservation dates for update must be future dates!");
+                }
+
+                else if (checkOut <= checkIn)
+                {
+                    Console.WriteLine("Erro na data de reserva! ");
+                }
+
+                else
+                {
+                    reservation.UpdateDates(checkIn, checkOut);
+                    Console.WriteLine("Reservation: " + reservation);
+                }
+
+            }
+
+            
 
 
 
-
-
-
-
-
-
-
-
-
+            #endregion
         }
     }
 }
