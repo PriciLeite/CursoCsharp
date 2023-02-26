@@ -47,7 +47,7 @@ namespace CursoCsharp.aula_11_Tratamento_de_Excecoes.Entities
                 + ", " 
                 + CheckOut.ToString("dd/MM/yyyy")
                 + ", "
-                + Duration() + "nigths";
+                + Duration() + " nigths";
         }
 
 

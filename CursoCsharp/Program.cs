@@ -1323,15 +1323,18 @@ namespace CursoCsharp
             DateTime checkOut = DateTime.Parse(Console.ReadLine());
 
 
-            if (checkOut <= checkIn)
+            if (checkOut < checkIn)
             {
-                Console.WriteLine("Erro na data de reserva! ");
+                Console.WriteLine("Erro: Data final menor do que Data inicial! ");
             }
 
             else
             {
                 Reservation reservation = new Reservation(roomNumber, checkIn, checkOut);
                 Console.WriteLine("Reservation: " + reservation);
+
+                DateTime now = DateTime.Now;
+                Console.WriteLine(now);
 
                 Console.WriteLine();
                 Console.WriteLine("Enter data to update the reservation:");
@@ -1340,7 +1343,7 @@ namespace CursoCsharp
                 Console.Write("Check-Out date (dd/MM/yyyy):  ");
                 checkOut = DateTime.Parse(Console.ReadLine());
 
-                DateTime now = DateTime.Now;
+                
 
                 if (checkIn < now || checkOut < now)
                 {
