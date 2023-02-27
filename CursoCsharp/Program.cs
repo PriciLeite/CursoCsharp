@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.IO;
+using System;
 using System.Globalization;
 using System.Collections.Generic;
 using CursoCsharp.Aula_05_Construtores_Palavra_this_Sobrecarga_Encapsulamento.AutoProperties;
@@ -1373,45 +1374,74 @@ namespace CursoCsharp
 
             // Aula- 153 -> Exercício Resolvido -> OBS: MODO CORRETO COM (Try/Cath)
             #region
+            /*
             try
             {
-                Console.Write("Room Number: ");
-                int roomNumber = int.Parse(Console.ReadLine());
-                Console.Write("Check-In date (dd/MM/yyyy): ");
+                Console.Write("Room number: ");
+                int number = int.Parse(Console.ReadLine());
+                Console.Write("Check-in date (dd/MM/yyyy): ");
                 DateTime checkIn = DateTime.Parse(Console.ReadLine());
-                Console.Write("Check-Out date (dd/MM/yyyy):  ");
+                Console.Write("Check-out date (dd/MM/yyyy): ");
                 DateTime checkOut = DateTime.Parse(Console.ReadLine());
 
-                //instânciar a classe Reservation
-                Reservation reservation = new Reservation(roomNumber, checkIn, checkOut);
+                Reservation reservation = new Reservation(number, checkIn, checkOut);
                 Console.WriteLine("Reservation: " + reservation);
 
                 Console.WriteLine();
-
                 Console.WriteLine("Enter data to update the reservation:");
-                Console.Write("Check-In date (dd/MM/yyyy): ");
+                Console.Write("Check-in date (dd/MM/yyyy): ");
                 checkIn = DateTime.Parse(Console.ReadLine());
-                Console.Write("Check-Out date (dd/MM/yyyy):  ");
+                Console.Write("Check-out date (dd/MM/yyyy): ");
                 checkOut = DateTime.Parse(Console.ReadLine());
 
-                //atualizar os dados
                 reservation.UpdateDates(checkIn, checkOut);
                 Console.WriteLine("Reservation: " + reservation);
             }
-
-            catch (DomianException e)
+            catch (FormatException e)
             {
-                Console.WriteLine("Erro in reservation: " + e.Message);
+                Console.WriteLine("Error in format: " + e.Message);
+            }
+            catch (DomainException e)
+            {
+                Console.WriteLine("Error in reservation: " + e.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Unexpected error: " + e.Message);
             }
 
-
+            */
             #endregion
 
 
 
 
+            // Aula- 195 - File / FileInfo / IOEexception
+            #region
+
+            /*
+            string sourcePath = @"C:\temp\file1.txt";
+            string targetPath = @"C:\temp\file2.txt";
 
 
+            try
+            {
+                FileInfo fileInfo = new FileInfo(sourcePath);
+                fileInfo.CopyTo(targetPath);
+                string[] lines = File.ReadAllLines(sourcePath);
+                foreach (string line in lines)
+                {
+                    Console.WriteLine(line);
+                }
+            
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine("An error occurred");
+                Console.WriteLine(e.Message);
+            }
+            */
+            #endregion
 
 
 

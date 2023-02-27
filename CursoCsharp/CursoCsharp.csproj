@@ -14,6 +14,8 @@
   <ItemGroup>
     <Folder Include="aula-06 Comportamento de Memoria - Arrays - Listas\Listas\Aula 76 a 78 exercicio\" />
     <Folder Include="aula-06 Comportamento de Memoria - Arrays - Listas\Matriz\Aula-80 exercicio\" />
+    <Folder Include="aula-12 Projeto JogoXadrez\" />
+    <Folder Include="aula-13 Trabalhando-com-Arquivos\aula-195 File-FileInfo-IOEexception\" />
   </ItemGroup>
 
 </Project>
