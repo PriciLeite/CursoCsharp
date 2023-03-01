@@ -28,7 +28,7 @@ using CursoCsharp.aula_10_Heranca_Polimorfismo.Metodos_Abstratos.Entities.Enums;
 using CursoCsharp.aula_10_Heranca_Polimorfismo.exe.proposto.final.Entities;
 using CursoCsharp.aula_11_Tratamento_de_Excecoes.Entities;
 using CursoCsharp.aula_11_Tratamento_de_Excecoes.Entities.Exceptions3;
-using Course.Entities;
+using CursoCsharp.aula_13_Trabalhando_com_Arquivos.aula_195_File_FileInfo_IOEexception;
 
 namespace CursoCsharp
 {
@@ -1448,6 +1448,50 @@ namespace CursoCsharp
 
 
 
+            // Aula 201- Exercício Proposto -> File / FileInfo / IOEexception
+            #region
+            /*
+            Console.WriteLine("Enter file full path: ");
+            string sourceFilePath = Console.ReadLine();
+
+            try
+            {
+                string[] lines = File.ReadAllLines(sourceFilePath);
+
+                string sourceFolderPath = Path.GetDirectoryName(sourceFilePath);
+                string targetFolderPath = sourceFolderPath + @"\out";
+                string targetFilePath = targetFolderPath + @"\summary.csv";
+
+                Directory.CreateDirectory(targetFolderPath);
+
+                using (StreamWriter sw = File.AppendText(targetFilePath))
+                {
+                    foreach (string line in lines)
+                    {
+
+                        string[] fields = line.Split(',');
+                        string name = fields[0];
+                        double price = double.Parse(fields[1], CultureInfo.InvariantCulture);
+                        int quantity = int.Parse(fields[2]);
+
+                        ProductSource prod = new ProductSource(name, price, quantity);
+
+                        sw.WriteLine(prod.Name + "," + prod.Total().ToString("F2", CultureInfo.InvariantCulture));
+                    }
+                }
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine("An error occurred");
+                Console.WriteLine(e.Message);
+            }
+
+            */
+
+            #endregion
+
+
+
 
 
 
@@ -1458,8 +1502,18 @@ namespace CursoCsharp
 
 
         }
+
+
+
     }
+
+
+
 }
+
+            
+
+        
 
 
 
