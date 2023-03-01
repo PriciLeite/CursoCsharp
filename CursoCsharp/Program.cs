@@ -29,6 +29,8 @@ using CursoCsharp.aula_10_Heranca_Polimorfismo.exe.proposto.final.Entities;
 using CursoCsharp.aula_11_Tratamento_de_Excecoes.Entities;
 using CursoCsharp.aula_11_Tratamento_de_Excecoes.Entities.Exceptions3;
 using CursoCsharp.aula_13_Trabalhando_com_Arquivos.aula_195_File_FileInfo_IOEexception;
+using CursoCsharp.aula_14_Interfaces.Exe.semInterface.Entities;
+using CursoCsharp.aula_14_Interfaces.Exe.semInterface.Services;
 
 namespace CursoCsharp
 {
@@ -1493,12 +1495,33 @@ namespace CursoCsharp
 
 
 
+            // Aula 204 - Exercício Resolvido: Sem Interface
 
 
+            Console.WriteLine("Enter rental data: ");
+            Console.Write("Car Model: ");
+            string model = Console.ReadLine();
+
+            Console.Write("Pickup (dd/MM/yyyy): ");
+            DateTime start = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture);
+            Console.Write("Return (dd/MM/yyyy): ");
+            DateTime finish = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture);
+           
+
+            Console.Write("Enter Price per hour: ");
+            double hour = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.Write("Enter price per dau: ");
+            double day = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
 
+            CarRental carRental = new CarRental(start, finish, new Vehicle(model));
 
+            RentalServices rentalServices = new RentalServices(hour, day);
 
+            rentalServices.ProcessInvoice(carRental);
+
+            Console.WriteLine("INVOICE:");
+            Console.WriteLine(carRental.invoice);
 
 
         }
@@ -1511,9 +1534,9 @@ namespace CursoCsharp
 
 }
 
-            
 
-        
+
+
 
 
 
