@@ -16,7 +16,7 @@ namespace CursoCsharp.aula_14_Interfaces.exe.proposto.Services
 
         public void ProcessContract(Contract contract, int months)
         {
-            double basicQuota = contract.TotalValue / months;
+            double basicQuota = contract.TotalValue / months;  // return valor dá parcela sem os juros e taxas.
             for (int i = 1; i <= months; i++)
             {
                 DateTime date = contract.Date.AddMonths(i);

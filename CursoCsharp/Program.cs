@@ -1529,7 +1529,8 @@ namespace CursoCsharp
 
 
             // Aula 208 - Exercício de fixação
-
+            #region
+            /*
             Console.WriteLine("Enter contract data");
             Console.Write("Number: ");
             int contractNumber = int.Parse(Console.ReadLine());
@@ -1550,7 +1551,26 @@ namespace CursoCsharp
             {
                 Console.WriteLine(installment);
             }
-       
+
+            */
+            #endregion
+
+      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
