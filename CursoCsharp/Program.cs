@@ -31,6 +31,8 @@ using CursoCsharp.aula_11_Tratamento_de_Excecoes.Entities.Exceptions3;
 using CursoCsharp.aula_13_Trabalhando_com_Arquivos.aula_195_File_FileInfo_IOEexception;
 using CursoCsharp.aula_14_Interfaces.Exe.semInterface.Entities;
 using CursoCsharp.aula_14_Interfaces.Exe.semInterface.Services;
+using CursoCsharp.aula_14_Interfaces.exe.proposto.Entities;
+using CursoCsharp.aula_14_Interfaces.exe.proposto.Services;
 
 namespace CursoCsharp
 {
@@ -1497,7 +1499,7 @@ namespace CursoCsharp
 
             // Aula 206 - Exercício Resolvido: Implementando a Interface.
             #region
-            
+            /*
             Console.WriteLine("Enter rental data: ");
             Console.Write("Car Model: ");
             string model = Console.ReadLine();
@@ -1522,9 +1524,36 @@ namespace CursoCsharp
 
             Console.WriteLine("INVOICE:");
             Console.WriteLine(carRental.invoice);
-            
+            */
             #endregion
 
+
+            // Aula 208 - Exercício de fixação
+
+            Console.WriteLine("Enter contract data");
+            Console.Write("Number: ");
+            int contractNumber = int.Parse(Console.ReadLine());
+            Console.Write("Date (dd/MM/yyyy): ");
+            DateTime contractDate = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
+            Console.Write("Contract value: ");
+            double contractValue = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.Write("Enter number of installments: ");
+            int months = int.Parse(Console.ReadLine());
+
+            Contract myContract = new Contract(contractNumber, contractDate, contractValue);
+
+            ContractService contractService = new ContractService(new PaypalService());
+            contractService.ProcessContract(myContract, months);
+
+            Console.WriteLine("Installments:");
+            foreach (Installment installment in myContract.Installments)
+            {
+                Console.WriteLine(installment);
+            }
+       
+        
+        
+        
         }
 
 
@@ -1534,6 +1563,29 @@ namespace CursoCsharp
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
