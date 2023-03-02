@@ -1495,7 +1495,7 @@ namespace CursoCsharp
 
 
 
-            // Aula 204 - Exercício Resolvido: Sem Interface
+            // Aula 206 - Exercício Resolvido: Implementando a Interface.
             #region
             
             Console.WriteLine("Enter rental data: ");
@@ -1516,7 +1516,7 @@ namespace CursoCsharp
 
             CarRental carRental = new CarRental(start, finish, new Vehicle(model));
 
-            RentalServices rentalServices = new RentalServices(hour, day, new BrazilTaxServices());
+            RentalServices rentalServices = new RentalServices(hour, day, new BrazilTaxServices()); //Intanciando com Interface.
 
             rentalServices.ProcessInvoice(carRental);
 
