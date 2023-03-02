@@ -3,7 +3,7 @@
 
 namespace CursoCsharp.aula_14_Interfaces.Exe.semInterface.Services
 {
-    class BrazilTaxServices
+    class BrazilTaxServices : ITaxService
     {
 
         public double Tax(double amount)

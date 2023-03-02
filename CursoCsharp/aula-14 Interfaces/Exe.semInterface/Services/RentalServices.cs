@@ -11,12 +11,14 @@ namespace CursoCsharp.aula_14_Interfaces.Exe.semInterface.Services
         public double PricePerHour { get; private set; }
         public double PricePerDay { get; private set; }
 
-        private BrazilTaxServices _brazilTaxServices = new BrazilTaxServices();
+        // private BrazilTaxServices _brazilTaxServices = new BrazilTaxServices(); ---> Substituido pela Interface --->
+        private ITaxService _taxService;
 
-        public RentalServices(double pricePerHour, double pricePerDay)
+        public RentalServices(double pricePerHour, double pricePerDay, ITaxService taxService)
         {
             PricePerHour = pricePerHour;
             PricePerDay = pricePerDay;
+            _taxService = taxService;
         }
 
 
@@ -34,7 +36,7 @@ namespace CursoCsharp.aula_14_Interfaces.Exe.semInterface.Services
                 basicPayment = PricePerDay * Math.Ceiling(duration.TotalDays);
             }
 
-            double tax = _brazilTaxServices.Tax(basicPayment);
+            double tax = _taxService.Tax(basicPayment);
             carRental.invoice = new Invoice(basicPayment, tax);
 
 

@@ -1496,8 +1496,8 @@ namespace CursoCsharp
 
 
             // Aula 204 - Exercício Resolvido: Sem Interface
-
-
+            #region
+            
             Console.WriteLine("Enter rental data: ");
             Console.Write("Car Model: ");
             string model = Console.ReadLine();
@@ -1516,13 +1516,14 @@ namespace CursoCsharp
 
             CarRental carRental = new CarRental(start, finish, new Vehicle(model));
 
-            RentalServices rentalServices = new RentalServices(hour, day);
+            RentalServices rentalServices = new RentalServices(hour, day, new BrazilTaxServices());
 
             rentalServices.ProcessInvoice(carRental);
 
             Console.WriteLine("INVOICE:");
             Console.WriteLine(carRental.invoice);
-
+            
+            #endregion
 
         }
 

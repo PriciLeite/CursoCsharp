@@ -1,6 +1,6 @@
 ﻿using System;
 using CursoCsharp.aula_14_Interfaces.Exe.semInterface.Entities;
-using CursoCsharp.aula_14_Interfaces.Exe.semInterface.Entities;
+
 
 namespace CursoCsharp.aula_14_Interfaces.Exe.semInterface.Entities
 {
