@@ -1567,7 +1567,7 @@ namespace CursoCsharp
             // Aula 213 - Generics - Set - Dictionary
             #region
 
-            PrintService printService = new PrintService();
+            PrintService<int> printService = new PrintService<int>();
 
             Console.Write("How many values: ");
             int n = int.Parse(Console.ReadLine());
