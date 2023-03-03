@@ -33,6 +33,7 @@ using CursoCsharp.aula_14_Interfaces.Exe.semInterface.Entities;
 using CursoCsharp.aula_14_Interfaces.Exe.semInterface.Services;
 using CursoCsharp.aula_14_Interfaces.exe.proposto.Entities;
 using CursoCsharp.aula_14_Interfaces.exe.proposto.Services;
+using CursoCsharp.aula_15_Generics___Set___Dictionary.Generics.exe.resolvido.Services;
 
 namespace CursoCsharp
 {
@@ -1497,6 +1498,8 @@ namespace CursoCsharp
 
 
 
+
+
             // Aula 206 - Exercício Resolvido: Implementando a Interface.
             #region
             /*
@@ -1528,6 +1531,9 @@ namespace CursoCsharp
             #endregion
 
 
+
+
+
             // Aula 208 - Exercício de fixação
             #region
             /*
@@ -1555,25 +1561,41 @@ namespace CursoCsharp
             */
             #endregion
 
-      
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+            // Aula 213 - Generics - Set - Dictionary
+            #region
+
+            PrintService printService = new PrintService();
+
+            Console.Write("How many values: ");
+            int n = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < n; i++)
+            {
+                int x = int.Parse(Console.ReadLine());
+                printService.AddValue(x);
+            }
+
+            printService.Print();
+            Console.WriteLine("First: " + printService.First());
+
+            #endregion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
 
 
