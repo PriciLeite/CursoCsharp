@@ -9,6 +9,14 @@ namespace CursoCsharp.aula_15_Generics___Set___Dictionary.Generics.Get.Equals___
         public string Email { get; set; }
 
 
+        public Client(string name, string email)
+        {
+            Name = name;
+            Email = email;
+        }
+
+
+
         public override bool Equals(object? obj)
         {
             if (!(obj is Client))
@@ -19,6 +27,7 @@ namespace CursoCsharp.aula_15_Generics___Set___Dictionary.Generics.Get.Equals___
             return Email.Equals(other.Email);
         
         }
+
 
         public override int GetHashCode()
         {

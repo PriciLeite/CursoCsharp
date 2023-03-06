@@ -36,6 +36,8 @@ using CursoCsharp.aula_14_Interfaces.exe.proposto.Services;
 using CursoCsharp.aula_15_Generics___Set___Dictionary.Generics.exe.resolvido.Services;
 using CursoCsharp.aula_15_Generics___Set___Dictionary.Generics.Ganeric_Exceptions_exe.resolvido.Services;
 using CursoCsharp.aula_15_Generics___Set___Dictionary.Generics.Ganeric_Exceptions_exe.resolvido.Entities;
+using CursoCsharp.aula_15_Generics___Set___Dictionary.Generics.Get.Equals___Get.HashCode.Entities;
+using Client = CursoCsharp.aula_15_Generics___Set___Dictionary.Generics.Get.Equals___Get.HashCode.Entities.Client;
 
 namespace CursoCsharp
 {
@@ -1615,6 +1617,36 @@ namespace CursoCsharp
             */
 
             #endregion
+
+
+
+
+            //Aula 216 - GetHashCode + Equals ----> Comparar objetos.
+            #region
+
+            /*
+            Client a = new Client("Maria", "maria@gmail.com");
+            Client b = new Client("José", "maria@gmail.com");
+
+
+            Console.WriteLine(a.Equals(b)); //compara o parametro passado no método (true --> pelo Email)
+
+            Console.WriteLine(a == b);   //compara os objetos. (False ---> pelo Name)
+
+            Console.WriteLine(a.GetHashCode());  //imprime os valores correspondentes
+            Console.WriteLine(b.GetHashCode());     //OBS: vai imprimir o mesmo valor pq os Emails são iguais.
+            */
+
+            #endregion
+
+
+
+
+
+
+
+
+
 
 
 
