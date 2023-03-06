@@ -21,7 +21,7 @@ using CursoCsharp.aula_10_Heranca_Polimorfismo.exe.resolvido.Entities;
 using CursoCsharp.aula_10_Heranca_Polimorfismo.exe.resolvido.Entities;
 using CursoCsharp.aula_10_Heranca_Polimorfismo.exe.proposto.Entities;
 using CursoCsharp.aula_10_Heranca_Polimorfismo.exe.proposto.Entities;
-using Product = CursoCsharp.aula_10_Heranca_Polimorfismo.exe.proposto.Entities.Product;
+//using Product = CursoCsharp.aula_10_Heranca_Polimorfismo.exe.proposto.Entities.Product;
 using CursoCsharp.aula_10_Heranca_Polimorfismo.exe.proposto;
 using CursoCsharp.aula_10_Heranca_Polimorfismo.Metodos_Abstratos.Entities;
 using CursoCsharp.aula_10_Heranca_Polimorfismo.Metodos_Abstratos.Entities.Enums;
@@ -34,6 +34,8 @@ using CursoCsharp.aula_14_Interfaces.Exe.semInterface.Services;
 using CursoCsharp.aula_14_Interfaces.exe.proposto.Entities;
 using CursoCsharp.aula_14_Interfaces.exe.proposto.Services;
 using CursoCsharp.aula_15_Generics___Set___Dictionary.Generics.exe.resolvido.Services;
+using CursoCsharp.aula_15_Generics___Set___Dictionary.Generics.Ganeric_Exceptions_exe.resolvido.Services;
+using CursoCsharp.aula_15_Generics___Set___Dictionary.Generics.Ganeric_Exceptions_exe.resolvido.Entities;
 
 namespace CursoCsharp
 {
@@ -1566,7 +1568,7 @@ namespace CursoCsharp
 
             // Aula 213 - Generics - Set - Dictionary
             #region
-
+            /*
             PrintService<int> printService = new PrintService<int>();
 
             Console.Write("How many values: ");
@@ -1580,19 +1582,39 @@ namespace CursoCsharp
 
             printService.Print();
             Console.WriteLine("First: " + printService.First());
-
+            */
             #endregion
 
 
 
 
+            // Aula 215 - Generic Exceptions -  solved exercise.
+            #region
+            /*
 
+            List<Stock> list = new List<Stock>();
 
+            Console.Write("Enter n: ");
+            int n = int.Parse(Console.ReadLine());
 
+            for (int i = 0; i < n; i++)
+            {
+                string[] vect = Console.ReadLine().Split(',');
+                string name = vect[0];
+                double price = double.Parse(vect[1], CultureInfo.InvariantCulture);
 
+                
+                list.Add(new Stock(name, price));
+            }
 
+            CalculateService calculateService = new CalculateService();
+            Stock max = calculateService.Max(list);
 
+            Console.WriteLine("Max is: ");
+            Console.WriteLine(max);
+            */
 
+            #endregion
 
 
 
