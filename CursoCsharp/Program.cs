@@ -38,6 +38,7 @@ using CursoCsharp.aula_15_Generics___Set___Dictionary.Generics.Ganeric_Exception
 using CursoCsharp.aula_15_Generics___Set___Dictionary.Generics.Ganeric_Exceptions_exe.resolvido.Entities;
 using CursoCsharp.aula_15_Generics___Set___Dictionary.Generics.Get.Equals___Get.HashCode.Entities;
 using Client = CursoCsharp.aula_15_Generics___Set___Dictionary.Generics.Get.Equals___Get.HashCode.Entities.Client;
+using CursoCsharp.aula_15_Generics___Set___Dictionary.Set.exe.resolvido.conjuntos.Entities;
 
 namespace CursoCsharp
 {
@@ -1663,6 +1664,56 @@ namespace CursoCsharp
             }
             */
             #endregion
+
+
+
+            //Aula 220 - Exercício resolvido ---> Conjuntos.
+            #region
+            /*
+            HashSet<LogRecord> set = new HashSet<LogRecord>();
+
+
+            Console.Write("Enter file full path: ");
+            string path = Console.ReadLine();
+
+
+            try
+            {
+                using (StreamReader sr = File.OpenText(path))
+                {
+                    while (!sr.EndOfStream)
+                    {
+                        string[] line = sr.ReadLine().Split(' ');
+                        string name = line[0];
+                        DateTime instant = DateTime.Parse(line[1]);
+                        set.Add(new LogRecord(name, instant));
+                        Console.WriteLine("Users:" + name);
+                    }
+                    Console.Write("Total user: " + set.Count());
+                   
+                }
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            */
+            #endregion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         }

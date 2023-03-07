@@ -16,7 +16,6 @@
     <Folder Include="aula-06 Comportamento de Memoria - Arrays - Listas\Matriz\Aula-80 exercicio\" />
     <Folder Include="aula-12 Projeto JogoXadrez\" />
     <Folder Include="aula-13 Trabalhando-com-Arquivos\aula-195 File-FileInfo-IOEexception\" />
-    <Folder Include="aula-15 Generics - Set - Dictionary\Set\HashSet\" />
   </ItemGroup>
 
 </Project>
