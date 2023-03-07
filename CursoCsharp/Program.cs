@@ -1668,15 +1668,20 @@ namespace CursoCsharp
 
 
 
+
+
             //Aula 220 - Exercício resolvido ---> Conjuntos.
             #region
             /*
-            HashSet<LogRecord> set = new HashSet<LogRecord>();
 
+            HashSet<LogRecord> set = new HashSet<LogRecord>(); //HashSet -> É um Conjunto...
 
-            Console.Write("Enter file full path: ");
-            string path = Console.ReadLine();
-
+                                                                // OBS: Pode ser verificado por valor(Struct)
+                                                                // |>>Struct: Verificar o valor na stack
+            Console.Write("Enter file full path: ");            // Pode ser verificado por Referência(Classe)     
+            string path = Console.ReadLine();                   // |>>Classe: Verificar o valor na stack se
+                                                                // não implementar Equals e GetHashCode na
+                                                                // na classe.
 
             try
             {
@@ -1688,7 +1693,11 @@ namespace CursoCsharp
                         string name = line[0];
                         DateTime instant = DateTime.Parse(line[1]);
                         set.Add(new LogRecord(name, instant));
-                        Console.WriteLine("Users:" + name);
+                        
+                    }
+                    foreach (var item in set)
+                    {
+                        Console.WriteLine("user: " + item.UserName);
                     }
                     Console.Write("Total user: " + set.Count());
                    
@@ -1702,8 +1711,12 @@ namespace CursoCsharp
             #endregion
 
 
-            //Aula 221 - Exercício Propósto:
 
+
+
+            //Aula 221 - Exercício Propósto:
+            #region
+            /*
             HashSet<int> cursoA = new HashSet<int>();
             HashSet<int> cursoB = new HashSet<int>();
             HashSet<int> cursoC = new HashSet<int>();
@@ -1742,14 +1755,61 @@ namespace CursoCsharp
             all.UnionWith(cursoB);
             all.UnionWith(cursoC);
             Console.Write("Total studants: " + all.Count());
+            */
+            #endregion
 
 
 
 
 
+            //Aula 223 - Exercício Propósto:
+            #region
+            
 
+            Console.Write("Enter file full path: ");
+            string path = Console.ReadLine();
 
+            
+            try
+            {
+                using (StreamReader sr = File.OpenText(path))
+                {
 
+                    Dictionary<string, int> dic = new Dictionary<string, int>();   //Dictionary<string, int> -> É um Dicionário...
+                                                                                   //Modelo <TKey, TValuer>
+                    while (!sr.EndOfStream)
+                    {
+                        string[] line = sr.ReadLine().Split(',');
+                        string candidate = line[0];
+                        int votes = int.Parse(line[1]);
+
+                        if (dic.ContainsKey(candidate))
+                        {
+                            dic[candidate] += votes;    //Somando os votos por nome de candidato;
+                        }
+                        else
+                        {
+                            dic[candidate] = votes;    //Somente Atribuindo o voto ao candidato;
+                        }
+
+                    }
+                    Console.WriteLine();
+                    foreach (var item in dic)          //var substitue: KeyValuePair<string, int>
+                    {
+                        Console.WriteLine(item.Key + ":" + item.Value);
+                    }
+                
+                }   
+
+            }
+            catch (IOException e)
+            {
+
+                Console.WriteLine(e.Message);
+            }
+                        
+            
+            #endregion
 
 
 
