@@ -1644,7 +1644,7 @@ namespace CursoCsharp
 
             //Aula 217 - HashSet e SortedSet ----> OBS: SÃO SEMELHANTES AOS CONJUNTOS DA ALGEBRA
             #region
-
+            /*
             HashSet<string> set = new HashSet<string>();
 
             set.Add("TV");
@@ -1661,7 +1661,7 @@ namespace CursoCsharp
             {
                 Console.WriteLine(s); 
             }
-
+            */
             #endregion
 
 
