@@ -1642,12 +1642,27 @@ namespace CursoCsharp
 
 
 
+            //Aula 217 - HashSet e SortedSet ----> OBS: SÃO SEMELHANTES AOS CONJUNTOS DA ALGEBRA
+            #region
 
+            HashSet<string> set = new HashSet<string>();
 
+            set.Add("TV");
+            set.Add("Computer");
+            set.Add("Tablet");
 
+            Console.WriteLine("Primeiro a inserir: " + set.First());
+            Console.WriteLine("Total de elementos: " + set.Count());
+            Console.WriteLine("Verificando se existe o elemento:" + set.Contains("Computer"));
 
+            Console.WriteLine("=========================");
+            Console.WriteLine("Imprimindo o conjunto: ");
+            foreach (string s in set)
+            {
+                Console.WriteLine(s); 
+            }
 
-
+            #endregion
 
 
         }
