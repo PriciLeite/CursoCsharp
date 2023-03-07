@@ -39,6 +39,7 @@ using CursoCsharp.aula_15_Generics___Set___Dictionary.Generics.Ganeric_Exception
 using CursoCsharp.aula_15_Generics___Set___Dictionary.Generics.Get.Equals___Get.HashCode.Entities;
 using Client = CursoCsharp.aula_15_Generics___Set___Dictionary.Generics.Get.Equals___Get.HashCode.Entities.Client;
 using CursoCsharp.aula_15_Generics___Set___Dictionary.Set.exe.resolvido.conjuntos.Entities;
+using CursoCsharp.aula_15_Generics___Set___Dictionary.Set.exe.proposto.Entities;
 
 namespace CursoCsharp
 {
@@ -1699,6 +1700,52 @@ namespace CursoCsharp
             }
             */
             #endregion
+
+
+            //Aula 221 - Exercício Propósto:
+
+            HashSet<int> cursoA = new HashSet<int>();
+            HashSet<int> cursoB = new HashSet<int>();
+            HashSet<int> cursoC = new HashSet<int>();
+
+
+
+            Console.Write("How many student for course A: ");
+            int n = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < n; i++)
+            {
+                int cod = int.Parse(Console.ReadLine());
+                cursoA.Add(cod);
+            }
+
+            Console.Write("How many student for course B: ");
+            n = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < n; i++)
+            {
+                int cod = int.Parse(Console.ReadLine());
+                cursoB.Add(cod);
+            }
+
+            Console.Write("How many student for course C: ");
+            n = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < n; i++)
+            {
+                int cod = int.Parse(Console.ReadLine());
+                cursoC.Add(cod);
+            }
+
+            Console.WriteLine();
+            HashSet<int> all = new HashSet<int>(cursoA);
+            all.UnionWith(cursoB);
+            all.UnionWith(cursoC);
+            Console.Write("Total studants: " + all.Count());
+
+
+
+
 
 
 
