@@ -40,7 +40,8 @@ using CursoCsharp.aula_15_Generics___Set___Dictionary.Generics.Get.Equals___Get.
 using Client = CursoCsharp.aula_15_Generics___Set___Dictionary.Generics.Get.Equals___Get.HashCode.Entities.Client;
 using CursoCsharp.aula_15_Generics___Set___Dictionary.Set.exe.resolvido.conjuntos.Entities;
 using CursoCsharp.aula_15_Generics___Set___Dictionary.Set.exe.proposto.Entities;
-
+using System.Linq;
+using aula17;
 namespace CursoCsharp
 {
     internal class Program
@@ -1764,8 +1765,8 @@ namespace CursoCsharp
 
             //Aula 223 - Exercício Propósto:
             #region
-            
 
+            /*
             Console.Write("Enter file full path: ");
             string path = Console.ReadLine();
 
@@ -1808,8 +1809,47 @@ namespace CursoCsharp
                 Console.WriteLine(e.Message);
             }
                         
-            
+            */
             #endregion
+
+
+
+
+            //Aula 241 - Exercício Resolvido:
+            #region
+
+            Console.Write("Enter full file path: ");
+            string path = Console.ReadLine();
+
+            List<ProductAverege> list = new List<ProductAverege>();
+
+
+            using (StreamReader sr = File.OpenText(path))
+            {
+                while (!sr.EndOfStream)
+                {
+                    string[] fields = sr.ReadLine().Split(',');
+                    string name = fields[0];
+                    double price = double.Parse(fields[1], CultureInfo.InvariantCulture);
+                    list.Add(new ProductAverege(name, price));
+                }
+            }
+
+
+
+            var avg = list.Select(p => p.Price).DefaultIfEmpty(0.0).Average();
+            Console.WriteLine("Average price = " + avg.ToString("F2", CultureInfo.InvariantCulture));
+
+            var names = list.Where(p => p.Price < avg).OrderByDescending(p => p.Name).Select(p => p.Name);
+            foreach (string name in names)
+            {
+                Console.WriteLine(name);
+            }
+
+
+
+            #endregion
+
 
 
 
