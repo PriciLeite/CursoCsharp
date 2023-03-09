@@ -42,6 +42,9 @@ using CursoCsharp.aula_15_Generics___Set___Dictionary.Set.exe.resolvido.conjunto
 using CursoCsharp.aula_15_Generics___Set___Dictionary.Set.exe.proposto.Entities;
 using System.Linq;
 using aula17;
+using CursoCsharp.aula_17_Expressoes_Lambda_Delegates_Linq.exe.fixacao_242;
+using Employee = CursoCsharp.aula_17_Expressoes_Lambda_Delegates_Linq.exe.fixacao_242.Employee;
+
 namespace CursoCsharp
 {
     internal class Program
@@ -1817,7 +1820,7 @@ namespace CursoCsharp
 
             //Aula 241 - Exercício Resolvido:
             #region
-
+            /*
             Console.Write("Enter full file path: ");
             string path = Console.ReadLine();
 
@@ -1845,17 +1848,60 @@ namespace CursoCsharp
             {
                 Console.WriteLine(name);
             }
-
-
+            */
 
             #endregion
 
 
 
+            //Aula 242 - Exercício Fixação:
+
+            Console.Write("Enter full file path:");
+            string path = Console.ReadLine();
+            Console.Write("Value Salary: ");
+            double limit = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
 
+            List<Employee> list = new List<Employee>();
 
+            try
+            {
+                using (StreamReader sr = File.OpenText(path))
+                {
+                    while (!sr.EndOfStream)
+                    {
+                        string[] line = sr.ReadLine().Split(',');
+                        string name = line[0];
+                        string email = line[1];
+                        double salary = double.Parse(line[2], CultureInfo.InvariantCulture);
+                        list.Add(new Employee(name, email, salary));
+                    }
+                }
 
+                var emails = list.Where(obj => obj.Salary > limit).OrderBy(obj => obj.Email).Select(obj => obj.Email);
+
+                var sum = list.Where(obj => obj.Name[0] == 'M').Sum(obj => obj.Salary);
+
+                
+
+                Console.WriteLine();
+                Console.WriteLine("Email dos funcionários com salário acima de: $" + limit.ToString("F2", CultureInfo.InvariantCulture));
+                foreach (string email in emails)
+                {
+                    Console.WriteLine(email);
+                }
+                
+                Console.WriteLine();               
+                Console.WriteLine("Soma dos salários das pessoas que inicia com a letra 'M': " + sum.ToString("F2"), CultureInfo.InvariantCulture);
+            
+            
+            }
+            
+            catch(IOException e)
+            {
+                Console.WriteLine("An error Ocurred: ");
+                Console.WriteLine(e.Message);
+            }
 
 
 
