@@ -1766,6 +1766,7 @@ namespace CursoCsharp
 
 
 
+           
             //Aula 223 - Exercício Propósto:
             #region
 
@@ -1818,6 +1819,7 @@ namespace CursoCsharp
 
 
 
+           
             //Aula 241 - Exercício Resolvido:
             #region
             /*
@@ -1854,8 +1856,11 @@ namespace CursoCsharp
 
 
 
+           
+            
             //Aula 242 - Exercício Fixação:
-
+            #region
+            /*
             Console.Write("Enter full file path:");
             string path = Console.ReadLine();
             Console.Write("Value Salary: ");
@@ -1902,8 +1907,8 @@ namespace CursoCsharp
                 Console.WriteLine("An error Ocurred: ");
                 Console.WriteLine(e.Message);
             }
-
-
+            */
+            #endregion
 
 
 
